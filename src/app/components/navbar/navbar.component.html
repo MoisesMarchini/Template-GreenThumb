@@ -1,0 +1,20 @@
+<header class="py-3 border-b">
+  <div class="nav-container container mx-auto">
+    <div class="flex items-baseline gap-10">
+      <h1 class="logo text-lg font-medium">
+        Logo
+      </h1>
+      <nav>
+        <ul class="flex gap-6">
+          <li class="text-sm" *ngFor="let link of linksList">
+            <a href="#" class="nav-link" [innerHTML]="link"></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="btn-actions flex gap-3 ml-auto">
+        <app-default-button [outline]="true">Sign Up</app-default-button>
+        <app-default-button>Login</app-default-button>
+      </div>
+    </div>
+  </div>
+</header>
