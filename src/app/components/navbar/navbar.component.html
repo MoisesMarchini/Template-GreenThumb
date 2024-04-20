@@ -4,7 +4,7 @@
       <h1 class="logo text-lg font-medium">
         Logo
       </h1>
-      <nav>
+      <nav class="hidden md:block">
         <ul class="flex gap-6">
           <li class="text-sm" *ngFor="let link of linksList">
             <a href="#" class="nav-link" [innerHTML]="link"></a>

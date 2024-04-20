@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -12,7 +13,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
     HeroSectionComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ]
 })
 export class SectionsModule { }

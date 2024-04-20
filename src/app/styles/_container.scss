@@ -1,0 +1,5 @@
+.container {
+  --_base-padding-x: calc(1.5rem + 4vmin);
+  padding-left: calc(var(--_base-padding-x) * 0.5);
+  padding-right: calc(var(--_base-padding-x) * 0.5);
+}

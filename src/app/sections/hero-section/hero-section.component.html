@@ -1,1 +1,15 @@
-<p>hero-section works!</p>
+<section>
+  <div class="container grid grid-rows-2 md:grid-rows-3 mx-auto gap-16 py-12 md:py-16">
+    <div class="content text-center flex flex-col items-center mx-auto gap-8 max-w-xl">
+      <h1 class="text-5xl font-bold">Embrace Nature with Sustainable Gardening Solutions</h1>
+      <p>Discover the joy of sustainable gardening and create a nature-connected lifestyle.</p>
+      <div class="btn-actions flex gap-3 mx-auto">
+        <app-default-button>Learn More</app-default-button>
+        <app-default-button [outline]="true">Sign Up</app-default-button>
+      </div>
+    </div>
+    <div class="img-wrapper md:row-span-2 grid place-content-center bg-gray-200 text-gray-400">
+      <i class="fa-solid fa-image text-9xl"></i>
+    </div>
+  </div>
+</section>
