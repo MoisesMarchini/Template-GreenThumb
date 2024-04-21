@@ -1,0 +1,28 @@
+<section>
+  <div class="container grid md:grid-cols-2 mx-auto gap-8 md:gap-16">
+    <app-placeholder-img-wrapper class="min-h-80"></app-placeholder-img-wrapper>
+    <div class="right grid">
+      <h2 class="font-semibold mb-6">Eco-friendly</h2>
+      <h3 class="font-bold text-5xl mb-10">
+        Discover the Benefits of Sustainable Gardening
+      </h3>
+      <p class="mb-8">
+        Using sustainable gardening products and techniques not only helps
+        protect the environment, but also promotes healthier plants and a more
+        nature-connected lifestyle. By making conscious choices in your garden,
+        you can create a thriving ecosystem and contribute to a greener future.
+      </p>
+      <ul class="grid md:grid-cols-2 gap-8 mb-10">
+        <li *ngFor="let options of cards">
+          <app-benefit-card [options]="options"></app-benefit-card>
+        </li>
+      </ul>
+      <app-default-button
+        [outline]="true"
+        [customClass]="'btn-xl'"
+        class="mr-auto"
+        >Learn More</app-default-button
+      >
+    </div>
+  </div>
+</section>

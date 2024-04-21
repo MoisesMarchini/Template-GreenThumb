@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { DefaultButtonComponent } from './default-button/default-button.component';
 import { PlaceholderImgWrapperComponent } from './placeholder-img-wrapper/placeholder-img-wrapper.component';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
+import { BenefitCardComponent } from './benefit-card/benefit-card.component';
 
 
 
@@ -14,12 +15,14 @@ import { FeatureCardComponent } from './feature-card/feature-card.component';
     DefaultButtonComponent,
     PlaceholderImgWrapperComponent,
     FeatureCardComponent,
+    BenefitCardComponent,
   ],
   exports: [
     NavbarComponent,
     DefaultButtonComponent,
     PlaceholderImgWrapperComponent,
     FeatureCardComponent,
+    BenefitCardComponent,
   ],
   imports: [
     CommonModule,

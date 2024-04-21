@@ -1,21 +1,29 @@
 <section>
-    <div class="container mx-auto grid gap-12">
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="grid md:mb-8">
-            <h2 class="font-semibold mb-6">Nature-friendly</h2>
-            <h3 class="font-bold text-5xl">
-              Discover the Benefits of Sustainable Gardening
-            </h3>
-          </div>
-          <p>Sustainable gardening offers numerous benefits for both the environment and your health. By using eco-friendly gardening practices, you can reduce your carbon footprint, conserve water, and create a thriving ecosystem in your own backyard. Additionally, gardening is a great way to stay active and improve mental well-being.</p>
-        </div>
-        <ul class="grid md:grid-cols-3 gap-10">
-          <li *ngFor="let options of featureCards">
-            <app-feature-card [options]="options"></app-feature-card>
-          </li>
-        </ul>
-        <div class="btn-actions flex gap-3">
-          <app-default-button [outline]="true" [customClass]="'btn-xl'">Learn More</app-default-button>
-        </div>
+  <div class="container mx-auto grid gap-16">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-16">
+      <div class="grid md:mb-8">
+        <h2 class="font-semibold mb-6">Nature-friendly</h2>
+        <h3 class="font-bold text-5xl">
+          Discover the Benefits of Sustainable Gardening
+        </h3>
+      </div>
+      <p>
+        Sustainable gardening offers numerous benefits for both the environment
+        and your health. By using eco-friendly gardening practices, you can
+        reduce your carbon footprint, conserve water, and create a thriving
+        ecosystem in your own backyard. Additionally, gardening is a great way
+        to stay active and improve mental well-being.
+      </p>
     </div>
+    <ul class="grid md:grid-cols-3 gap-10">
+      <li *ngFor="let options of featureCards">
+        <app-feature-card [options]="options"></app-feature-card>
+      </li>
+    </ul>
+    <div class="btn-actions flex gap-3">
+      <app-default-button [outline]="true" [customClass]="'btn-xl'"
+        >Learn More</app-default-button
+      >
+    </div>
+  </div>
 </section>

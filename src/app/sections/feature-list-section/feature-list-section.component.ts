@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { title } from 'process';
+import { Card } from '../../models/card';
 
 @Component({
   selector: 'app-feature-list-section',
@@ -7,7 +8,7 @@ import { title } from 'process';
   styleUrl: './feature-list-section.component.scss'
 })
 export class FeatureListSectionComponent {
-  featureCards = [
+  featureCards: Card[] = [
     {
       title: 'Environmental Impact',
       body: 'Reduce your carbon footprint and conserve resources.'
