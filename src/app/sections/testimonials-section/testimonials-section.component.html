@@ -1,0 +1,39 @@
+<section>
+  <div class="container mx-auto">
+    <div class="grid md:grid-cols-2 gap-6 md:gap-16">
+      <app-placeholder-img-wrapper
+        class="min-h-80"
+      ></app-placeholder-img-wrapper>
+      <div class="content md:my-16 md:pt-16 pb-16 grid gap-6 relative">
+        <div class="flex flex-col gap-6 min-h-72">
+          <div class="review-stars flex gap-1">
+            <span *ngFor="let index of [].constructor(5); let i = index">
+              <i
+                [class]="
+                  (cards[currentCardIndex].review ?? 0 <= i
+                    ? 'fa-solid'
+                    : 'fa-regular') + ' fa-star'
+                "
+              ></i>
+            </span>
+          </div>
+          <p class="text-xl font-bold">
+            {{ cards[currentCardIndex].body }}
+          </p>
+          <div class="user-info">
+            <p class="text-sm font-semibold">
+              {{ cards[currentCardIndex].userName }}
+            </p>
+            <p class="text-sm">{{ cards[currentCardIndex].userOccupation }}</p>
+          </div>
+          <div class="controls mt-auto flex gap-4">
+            <app-default-button (_onClick)="previous()"
+              >Previous</app-default-button
+            >
+            <app-default-button (_onClick)="next()">Next</app-default-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

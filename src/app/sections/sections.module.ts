@@ -6,6 +6,7 @@ import { FeatureSectionComponent } from './feature-section/feature-section.compo
 import { BenefitsSectionModule } from './benefits-section/benefits-section.module';
 import { FeatureListSectionModule } from './feature-list-section/feature-list-section.module';
 import { StatsSectionModule } from './stats-section/stats-section.module';
+import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
 
 
 
@@ -13,10 +14,12 @@ import { StatsSectionModule } from './stats-section/stats-section.module';
   declarations: [
     HeroSectionComponent,
     FeatureSectionComponent,
+    TestimonialsSectionComponent,
   ],
   exports: [
     HeroSectionComponent,
     FeatureSectionComponent,
+    TestimonialsSectionComponent,
     BenefitsSectionModule,
     FeatureListSectionModule,
     StatsSectionModule
