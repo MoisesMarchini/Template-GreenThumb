@@ -1,6 +1,6 @@
 <footer class="section">
   <div class="container mx-auto">
-    <div class="grid md:grid-cols-5 mb-16">
+    <div class="grid md:grid-cols-5 mb-16 gap-6">
       <div class="left md:col-span-3 flex flex-col gap-4">
         <h1 class="font-medium text-lg">Logo</h1>
         <div class="content text-sm grid gap-4">
@@ -16,7 +16,7 @@
           </p>
         </div>
       </div>
-      <div class="middle">
+      <div class="middle md:col-span-2 grid grid-cols-2 gap-6">
         <ul class="flex flex-col gap-2 font-semibold">
           <li *ngFor="let item of footerLinks1">
             <a
@@ -29,8 +29,6 @@
             </a>
           </li>
         </ul>
-      </div>
-      <div class="right">
         <ul class="flex flex-col gap-2 font-semibold">
           <li *ngFor="let item of footerLinks2">
             <a
@@ -46,7 +44,7 @@
       </div>
     </div>
     <hr class="mb-6 border-black" />
-    <div class="flex justify-between text-sm">
+    <div class="flex flex-wrap gap-6 justify-between text-sm">
       <p>© 2024. All rights reserved.</p>
       <ul class="internal-links flex gap-3 font-semibold">
         <li>
