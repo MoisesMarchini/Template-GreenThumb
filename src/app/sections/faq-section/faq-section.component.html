@@ -5,7 +5,7 @@
       Find answers to common questions about sustainable gardening and using our
       products effectively.
     </p>
-    <ul class="grid gap-4">
+    <ul class="grid gap-4 mb-12">
       <li *ngFor="let card of cards; let i = index">
         <div
           class="card border border-black grid gap-3 p-3"
@@ -21,5 +21,10 @@
         </div>
       </li>
     </ul>
+    <div class="flex flex-col items-start gap-6">
+      <h2 class="font-bold text-2xl">Still have questions?</h2>
+      <p class="">Contact us for further assistance.</p>
+      <app-default-button [outline]="true">Contact</app-default-button>
+    </div>
   </div>
 </section>

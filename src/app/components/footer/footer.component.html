@@ -1,0 +1,64 @@
+<footer class="section">
+  <div class="container mx-auto">
+    <div class="grid md:grid-cols-5 mb-16">
+      <div class="left md:col-span-3 flex flex-col gap-4">
+        <h1 class="font-medium text-lg">Logo</h1>
+        <div class="content text-sm grid gap-4">
+          <p>
+            <span class="font-semibold"> Address: </span>
+            <br />
+            <span>Level 1, 12 Sample St, Sydney NSW 2000</span>
+          </p>
+          <p>
+            <span class="font-semibold"> Contact: </span>
+            <br />
+            <span>{{ "email@email.com" }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="middle">
+        <ul class="flex flex-col gap-2 font-semibold">
+          <li *ngFor="let item of footerLinks1">
+            <a
+              class="text-sm"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ item }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul class="flex flex-col gap-2 font-semibold">
+          <li *ngFor="let item of footerLinks2">
+            <a
+              class="text-sm"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ item }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mb-6 border-black" />
+    <div class="flex justify-between text-sm">
+      <p>© 2024. All rights reserved.</p>
+      <ul class="internal-links flex gap-3 font-semibold">
+        <li>
+          <a class="underline" href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a class="underline" href="#">Terms of Service</a>
+        </li>
+        <li>
+          <a class="underline" href="#">Cookies Settings</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

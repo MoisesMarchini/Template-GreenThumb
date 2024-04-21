@@ -6,6 +6,7 @@ import { DefaultButtonComponent } from './default-button/default-button.componen
 import { PlaceholderImgWrapperComponent } from './placeholder-img-wrapper/placeholder-img-wrapper.component';
 import { FormsModule } from '@angular/forms';
 import { DefaultInputComponent } from './default-input/default-input.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -15,12 +16,14 @@ import { DefaultInputComponent } from './default-input/default-input.component';
     DefaultButtonComponent,
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
+    FooterComponent
   ],
   exports: [
     NavbarComponent,
     DefaultButtonComponent,
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
