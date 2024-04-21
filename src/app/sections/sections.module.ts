@@ -8,6 +8,7 @@ import { FeatureListSectionModule } from './feature-list-section/feature-list-se
 import { StatsSectionModule } from './stats-section/stats-section.module';
 import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
 import { CTASectionComponent } from './cta-section/cta-section.component';
+import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
 
 
 
@@ -17,12 +18,14 @@ import { CTASectionComponent } from './cta-section/cta-section.component';
     FeatureSectionComponent,
     TestimonialsSectionComponent,
     CTASectionComponent,
+    NewsletterSectionComponent,
   ],
   exports: [
     HeroSectionComponent,
     FeatureSectionComponent,
     TestimonialsSectionComponent,
     CTASectionComponent,
+    NewsletterSectionComponent,
     BenefitsSectionModule,
     FeatureListSectionModule,
     StatsSectionModule
