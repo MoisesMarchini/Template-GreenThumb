@@ -9,6 +9,7 @@ import { StatsSectionModule } from './stats-section/stats-section.module';
 import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
 import { CTASectionComponent } from './cta-section/cta-section.component';
 import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
+import { FAQSectionComponent } from './faq-section/faq-section.component';
 
 
 
@@ -19,6 +20,7 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
     TestimonialsSectionComponent,
     CTASectionComponent,
     NewsletterSectionComponent,
+    FAQSectionComponent,
   ],
   exports: [
     HeroSectionComponent,
@@ -26,6 +28,7 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
     TestimonialsSectionComponent,
     CTASectionComponent,
     NewsletterSectionComponent,
+    FAQSectionComponent,
     BenefitsSectionModule,
     FeatureListSectionModule,
     StatsSectionModule

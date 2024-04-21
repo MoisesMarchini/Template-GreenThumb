@@ -1,0 +1,25 @@
+<section>
+  <div class="container mx-auto grid gap-6">
+    <h2 class="font-bold text-4xl">Frequently Asked Questions</h2>
+    <p class="mb-8">
+      Find answers to common questions about sustainable gardening and using our
+      products effectively.
+    </p>
+    <ul class="grid gap-4">
+      <li *ngFor="let card of cards; let i = index">
+        <div
+          class="card border border-black grid gap-3 p-3"
+          (click)="setCard(i)"
+          [class.expand]="i === currentCardIndex"
+        >
+          <p class="font-bold text-sm">
+            {{ card.title }}
+          </p>
+          <p class="text-sm max-w-2xl body hidden">
+            {{ card.body }}
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
