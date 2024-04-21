@@ -7,6 +7,7 @@ import { BenefitsSectionModule } from './benefits-section/benefits-section.modul
 import { FeatureListSectionModule } from './feature-list-section/feature-list-section.module';
 import { StatsSectionModule } from './stats-section/stats-section.module';
 import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
+import { CTASectionComponent } from './cta-section/cta-section.component';
 
 
 
@@ -15,11 +16,13 @@ import { TestimonialsSectionComponent } from './testimonials-section/testimonial
     HeroSectionComponent,
     FeatureSectionComponent,
     TestimonialsSectionComponent,
+    CTASectionComponent,
   ],
   exports: [
     HeroSectionComponent,
     FeatureSectionComponent,
     TestimonialsSectionComponent,
+    CTASectionComponent,
     BenefitsSectionModule,
     FeatureListSectionModule,
     StatsSectionModule
