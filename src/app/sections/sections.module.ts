@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ComponentsModule } from '../components/components.module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
-import { FeatureListSectionComponent } from './feature-list-section/feature-list-section.component';
-import { BenefitsSectionComponent } from './benefits-section/benefits-section.component';
+import { BenefitsSectionModule } from './benefits-section/benefits-section.module';
+import { FeatureListSectionModule } from './feature-list-section/feature-list-section.module';
 
 
 
@@ -12,18 +12,18 @@ import { BenefitsSectionComponent } from './benefits-section/benefits-section.co
   declarations: [
     HeroSectionComponent,
     FeatureSectionComponent,
-    FeatureListSectionComponent,
-    BenefitsSectionComponent,
   ],
   exports: [
     HeroSectionComponent,
     FeatureSectionComponent,
-    FeatureListSectionComponent,
-    BenefitsSectionComponent,
+    BenefitsSectionModule,
+    FeatureListSectionModule
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    BenefitsSectionModule,
+    FeatureListSectionModule
   ]
 })
 export class SectionsModule { }
