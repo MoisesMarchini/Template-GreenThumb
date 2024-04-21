@@ -1,9 +1,7 @@
-<header class="py-3 border-b">
+<header [class]="'py-3 sticky top-0 ' + (isSticked ? 'shadow-lg sticked' : '')">
   <div class="nav-container container mx-auto">
     <div class="flex items-baseline gap-10">
-      <h1 class="logo text-lg font-medium">
-        Logo
-      </h1>
+      <h1 class="logo text-lg font-medium">Logo</h1>
       <nav class="hidden md:block">
         <ul class="flex gap-6">
           <li class="text-sm" *ngFor="let link of linksList">

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Card } from '../../../models/card';
+import { FeatureCard } from '../../../models/feature-card';
 
 @Component({
   selector: 'app-feature-card',
@@ -7,5 +7,5 @@ import { Card } from '../../../models/card';
   styleUrl: './feature-card.component.scss'
 })
 export class FeatureCardComponent {
-  @Input() options: Partial<Card>  = {};
+  @Input() options: Partial<FeatureCard>  = {};
 }

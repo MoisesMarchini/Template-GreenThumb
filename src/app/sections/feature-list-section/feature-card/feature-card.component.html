@@ -1,9 +1,13 @@
 <div class="grid mb-8">
-  <app-placeholder-img-wrapper class="min-h-60 mb-6"></app-placeholder-img-wrapper>
+  <app-placeholder-img-wrapper
+    [imgSrc]="options.imgSrc"
+    [customCss]="'p-8'"
+    class="h-60 mb-6"
+  ></app-placeholder-img-wrapper>
   <h6 class="text-3xl font-bold mb-6">
-    {{options.title}}
+    {{ options.title }}
   </h6>
   <p>
-    {{options.body}}
+    {{ options.body }}
   </p>
 </div>

@@ -7,6 +7,7 @@ import { PlaceholderImgWrapperComponent } from './placeholder-img-wrapper/placeh
 import { FormsModule } from '@angular/forms';
 import { DefaultInputComponent } from './default-input/default-input.component';
 import { FooterComponent } from './footer/footer.component';
+import { DirectivesModule } from '../directives/directives.module';
 
 
 
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    DirectivesModule
   ]
 })
 export class ComponentsModule { }
