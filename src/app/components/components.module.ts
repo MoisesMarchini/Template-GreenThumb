@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { DefaultButtonComponent } from './default-button/default-button.component';
+import { PlaceholderImgWrapperComponent } from './placeholder-img-wrapper/placeholder-img-wrapper.component';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    DefaultButtonComponent
+    DefaultButtonComponent,
+    PlaceholderImgWrapperComponent
   ],
   exports: [
     NavbarComponent,
-    DefaultButtonComponent
+    DefaultButtonComponent,
+    PlaceholderImgWrapperComponent
   ],
   imports: [
     CommonModule,
