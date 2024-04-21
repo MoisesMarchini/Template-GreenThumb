@@ -5,6 +5,7 @@ import { ComponentsModule } from '../components/components.module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
 import { BenefitsSectionModule } from './benefits-section/benefits-section.module';
 import { FeatureListSectionModule } from './feature-list-section/feature-list-section.module';
+import { StatsSectionModule } from './stats-section/stats-section.module';
 
 
 
@@ -17,13 +18,15 @@ import { FeatureListSectionModule } from './feature-list-section/feature-list-se
     HeroSectionComponent,
     FeatureSectionComponent,
     BenefitsSectionModule,
-    FeatureListSectionModule
+    FeatureListSectionModule,
+    StatsSectionModule
   ],
   imports: [
     CommonModule,
     ComponentsModule,
     BenefitsSectionModule,
-    FeatureListSectionModule
+    FeatureListSectionModule,
+    StatsSectionModule
   ]
 })
 export class SectionsModule { }
