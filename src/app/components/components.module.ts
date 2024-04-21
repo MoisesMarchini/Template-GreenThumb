@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { DefaultButtonComponent } from './default-button/default-button.component';
 import { PlaceholderImgWrapperComponent } from './placeholder-img-wrapper/placeholder-img-wrapper.component';
+import { FeatureCardComponent } from './feature-card/feature-card.component';
 
 
 
@@ -11,12 +12,14 @@ import { PlaceholderImgWrapperComponent } from './placeholder-img-wrapper/placeh
   declarations: [
     NavbarComponent,
     DefaultButtonComponent,
-    PlaceholderImgWrapperComponent
+    PlaceholderImgWrapperComponent,
+    FeatureCardComponent,
   ],
   exports: [
     NavbarComponent,
     DefaultButtonComponent,
-    PlaceholderImgWrapperComponent
+    PlaceholderImgWrapperComponent,
+    FeatureCardComponent,
   ],
   imports: [
     CommonModule,

@@ -135,17 +135,25 @@ button,
 
   background-color: var(--bg-color);
   color: var(--color);
-  border: 1px solid;
+  border-style: solid;
+  border-width: 1px;
   border-color: var(--border-color);
   transition: background-color var(--default-animation-duration),
     border-color var(--default-animation-duration),
     color var(--default-animation-duration);
+  &.btn-xl {
+    padding: 0.875rem 1.5rem;
+  }
   &.active,
   &:hover {
     border-color: var(--active-border-color);
     background-color: var(--active-bg-color);
     color: var(--active-color);
   }
+}
+
+.border-0 {
+  border-width: 0;
 }
 
 @each $key-name, $btn in $btns {

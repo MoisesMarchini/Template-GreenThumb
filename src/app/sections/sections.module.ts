@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ComponentsModule } from '../components/components.module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
+import { FeatureListSectionComponent } from './feature-list-section/feature-list-section.component';
 
 
 
@@ -10,10 +11,12 @@ import { FeatureSectionComponent } from './feature-section/feature-section.compo
   declarations: [
     HeroSectionComponent,
     FeatureSectionComponent,
+    FeatureListSectionComponent
   ],
   exports: [
     HeroSectionComponent,
     FeatureSectionComponent,
+    FeatureListSectionComponent
   ],
   imports: [
     CommonModule,

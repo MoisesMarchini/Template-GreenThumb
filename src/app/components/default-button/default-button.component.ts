@@ -42,7 +42,8 @@ export class DefaultButtonComponent {
   @Input() type: 'submit' | 'button' = 'button';
   @Input() fontawesomeIcon: string = '';
   @Input() outline: boolean = false;
-  @Input() btnColor: string = 'primary';
+  @Input() btnColor: string = 'dark';
+  @Input() customClass: string = '';
   @Input() disabled: boolean = false;
   @Input() hideLabelOnMobile: boolean = false;
   @Input() routerLink?: string;
@@ -50,7 +51,7 @@ export class DefaultButtonComponent {
   @Output() _onClick: EventEmitter<any> = new EventEmitter<any>();
 
   btnClass() {
-    return (this.outline ? 'outline-' : '') + 'dark';//this.btnColor;
+    return (this.outline ? 'outline-' : '') + this.btnColor + ' ' + this.customClass;
   }
 
   onClick() {
