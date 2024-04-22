@@ -1,10 +1,11 @@
 <section>
   <div class="container mx-auto grid md:grid-cols-2 gap-6 md:gap-16">
-    <h2 class="font-bold text-4xl">Start Your Gardening Journey</h2>
+    <h2 class="font-bold text-4xl">
+      {{ sectionProps.title }}
+    </h2>
     <div class="grid gap-6">
       <p class="">
-        Discover our wide range of sustainable gardening products and get expert
-        tips to create your own nature-connected oasis.
+        {{ sectionProps.body }}
       </p>
       <div class="btn-actions flex gap-3">
         <app-default-button>Explore</app-default-button>

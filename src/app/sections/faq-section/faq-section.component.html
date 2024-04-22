@@ -1,12 +1,17 @@
 <section>
   <div class="container mx-auto grid gap-6">
-    <h2 class="font-bold text-4xl">Frequently Asked Questions</h2>
+    <h2 class="font-bold text-4xl">
+      {{ sectionProps.title }}
+    </h2>
     <p class="mb-8">
-      Find answers to common questions about sustainable gardening and using our
-      products effectively.
+      {{ sectionProps.body }}
     </p>
     <ul class="grid gap-4 mb-12">
-      <li *ngFor="let card of cards; let i = index">
+      <li
+        *ngFor="let card of sectionProps.cards; let i = index"
+        class="show-anim"
+        [delayIndex]="i"
+      >
         <div
           class="card border border-black grid gap-3 p-3"
           (click)="setCard(i)"
@@ -21,9 +26,13 @@
         </div>
       </li>
     </ul>
-    <div class="flex flex-col items-start gap-6">
-      <h2 class="font-bold text-2xl">Still have questions?</h2>
-      <p class="">Contact us for further assistance.</p>
+    <div class="flex flex-col items-start gap-6 show-anim">
+      <h2 class="font-bold text-2xl">
+        {{ sectionProps.bottomCard.title }}
+      </h2>
+      <p class="">
+        {{ sectionProps.bottomCard.body }}
+      </p>
       <app-default-button [outline]="true">Contact</app-default-button>
     </div>
   </div>

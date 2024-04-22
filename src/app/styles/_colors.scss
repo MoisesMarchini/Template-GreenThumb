@@ -1,19 +1,19 @@
 $primary-dark: #50924a;
 $primary-light: #7fa764;
-$primary-lightest: #B5C18E;
-$primary-alt-dark: #A8CD9F;
-$primary-alt-light: #E2F4C5;
-$secondary-light: #1679AB;
+$primary-lightest: #b5c18e;
+$primary-alt-dark: #a8cd9f;
+$primary-alt-light: #e2f4c5;
+$secondary-light: #1679ab;
 $secondary-dark: #074173;
-$terciary-dark: #E8751A;
-$terciary-light: #FDA403;
+$terciary-dark: #e8751a;
+$terciary-light: #fda403;
 $dark: #444;
 $black: #000;
 $light: #ccc;
 $white: #fff;
 
-$content-bg-alt: #F7DCB9;
-$body-bg: #FFF5E0;
+$content-bg-alt: #f7dcb9;
+$body-bg: $white;
 $default-text-color: $dark;
 $text-muted: #666;
 $border-color: #ccc;
@@ -32,14 +32,14 @@ $theme-colors: (
   "light": $light,
   "black": $black,
   "white": $white,
-  "muted": $text-muted,
+  "muted": $text-muted
 );
 
 $all-colors: (
   "content-bg-alt": $content-bg-alt,
   "body-bg": $body-bg,
   "default-text-color": $default-text-color,
-  "border-color": $border-color,
+  "border-color": $border-color
 );
 
 $all-colors: map-merge($theme-colors, $all-colors);

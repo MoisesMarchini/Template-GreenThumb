@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BenefitsSectionComponent } from './benefits-section.component';
 import { BenefitCardComponent } from './benefit-card/benefit-card.component';
 import { ComponentsModule } from '../../components/components.module';
+import { DirectivesModule } from '../../directives/directives.module';
+import { SectionAnimationShowDirective } from '../../directives/section-animation-show.directive';
 
 
 
@@ -16,7 +18,11 @@ import { ComponentsModule } from '../../components/components.module';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    DirectivesModule,
+  ],
+  providers: [
+    SectionAnimationShowDirective
   ]
 })
 export class BenefitsSectionModule { }

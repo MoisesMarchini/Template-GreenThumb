@@ -1,27 +1,26 @@
-<section [class]="getLayout('background') + ' flex relative'">
+<section [class]="getLayout('background') + ' flex relative no-anim'">
   <div
     [class]="
       'container grow grid gap-16 mx-auto ' +
       getLayout('column') +
-      (textColor ? ' text-' + textColor : '')
+      (sectionProps.textColor ? ' text-' + sectionProps.textColor : '')
     "
   >
     <div
       class="content relative z-10 text-center flex flex-col items-center mx-auto gap-8 max-w-xl"
     >
       <h1 class="text-5xl font-bold">
-        Embrace Nature with Sustainable Gardening Solutions
+        {{ sectionProps.title }}
       </h1>
       <p>
-        Discover the joy of sustainable gardening and create a nature-connected
-        lifestyle.
+        {{ sectionProps.subtitle }}
       </p>
       <div class="btn-actions flex gap-3 mx-auto">
         <app-default-button>Learn More</app-default-button>
       </div>
     </div>
     <app-placeholder-img-wrapper
-      [imgSrc]="heroProps.bgImgSrc"
+      [imgSrc]="sectionProps.bgImgSrc"
       [class]="
         isHeroColumn
           ? 'md:row-span-2'

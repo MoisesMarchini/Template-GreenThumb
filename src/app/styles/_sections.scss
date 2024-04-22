@@ -1,4 +1,31 @@
-section, .section {
+section,
+.section {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+section,
+.section,
+.show-anim {
+  --_anim-duration: 0.75s;
+  --_anim-delay-index: 0;
+  --_anim-delay-value: calc(var(--_anim-duration) * 0.25);
+  --_anim-delay: calc(var(--_anim-delay-index) * var(--_anim-delay-value));
+
+  transition:
+    opacity var(--_anim-duration),
+    transform var(--_anim-duration);
+  transition-timing-function: ease-out;
+  transition-delay: var(--_anim-delay);
+}
+
+.hide-section {
+  transition: none;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.no-anim {
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
 }

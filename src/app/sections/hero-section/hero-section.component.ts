@@ -1,5 +1,6 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { NavProps } from '../../components/navbar/navbar.component';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-hero-section',
@@ -7,27 +8,23 @@ import { NavProps } from '../../components/navbar/navbar.component';
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-  heroType: 'column' | 'background' = 'background';
-  textColor: string = 'white';
   scrolled = false;
+
+  sectionProps = environment.sectionProps.hero;
+
+  isHeroColumn = this.sectionProps.bgLayout == 'column';
 
   constructor(private elementRef: ElementRef){}
 
-  isHeroColumn = this.heroType == 'column';
-
-  heroProps = {
-    bgImgSrc: '/assets/images/hero-bg.jpg'
-  }
-
   getLayout(type?: 'column' | 'background') {
     if (!type || type == 'column') {
-      if(this.heroType == 'column')
+      if(this.sectionProps.bgLayout == 'column')
         return 'grid-rows-2 md:grid-rows-3';
 
       return 'place-content-center';
     }
 
-    if (this.heroType == 'background' && (!type || type == 'background') ) {
+    if (this.sectionProps.bgLayout == 'background' && (!type || type == 'background') ) {
       return 'min-h-svh';
     }
 

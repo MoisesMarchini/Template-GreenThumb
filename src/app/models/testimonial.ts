@@ -3,5 +3,5 @@ export interface Testimonial {
   body: string,
   userName: string,
   userOccupation: string,
-  userImgPath: string,
+  userImgPath?: string,
 }

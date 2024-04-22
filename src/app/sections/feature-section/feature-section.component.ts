@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-feature-section',
@@ -6,7 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './feature-section.component.scss'
 })
 export class FeatureSectionComponent {
-  sectionProps = {
-    sideImgSrc: ''
-  }
+  sectionProps = environment.sectionProps.feature
 }

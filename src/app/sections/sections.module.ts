@@ -10,6 +10,8 @@ import { TestimonialsSectionComponent } from './testimonials-section/testimonial
 import { CTASectionComponent } from './cta-section/cta-section.component';
 import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
 import { FAQSectionComponent } from './faq-section/faq-section.component';
+import { DirectivesModule } from '../directives/directives.module';
+import { SectionAnimationShowDirective } from '../directives/section-animation-show.directive';
 
 
 
@@ -38,7 +40,11 @@ import { FAQSectionComponent } from './faq-section/faq-section.component';
     ComponentsModule,
     BenefitsSectionModule,
     FeatureListSectionModule,
+    DirectivesModule,
     StatsSectionModule
+  ],
+  providers: [
+    SectionAnimationShowDirective
   ]
 })
 export class SectionsModule { }

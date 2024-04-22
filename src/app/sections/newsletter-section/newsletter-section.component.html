@@ -1,13 +1,15 @@
 <section>
   <div class="container mx-auto relative" style="padding: 2.5rem">
     <app-placeholder-img-wrapper
+      [imgSrc]="sectionProps.bgImgSrc"
       class="container-bg absolute grid z-0 inset-0 brightness-50"
     ></app-placeholder-img-wrapper>
     <div class="grid gap-6 relative z-1 text-white">
-      <h2 class="font-bold text-4xl">Get Gardening Tips and Offers</h2>
+      <h2 class="font-bold text-4xl">
+        {{ sectionProps.title }}
+      </h2>
       <p class="">
-        Subscribe to our newsletter for the latest gardening tips, updates, and
-        exclusive offers.
+        {{ sectionProps.body }}
       </p>
       <div class="flex gap-3 items-stretch">
         <app-default-input placeholder="Your email adress"></app-default-input>

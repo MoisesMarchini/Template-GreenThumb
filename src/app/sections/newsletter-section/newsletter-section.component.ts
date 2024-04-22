@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-newsletter-section',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './newsletter-section.component.scss'
 })
 export class NewsletterSectionComponent {
-
+  sectionProps = environment.sectionProps.newsletter;
 }
