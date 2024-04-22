@@ -15,7 +15,7 @@ export class SectionAnimationShowDirective implements OnInit {
 
   ngOnInit() {
     // caso o javascript esteja ativado
-    this.disabled = false;
+    // this.disabled = false;
 
     if (window.outerWidth > 768)
       this.elementRef.nativeElement.style.setProperty('--_anim-delay-index', `${this.delayIndex}`);
