@@ -5,7 +5,8 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit } from 
 })
 export class SectionAnimationShowDirective implements OnInit {
   @Input() delayIndex: number = 0;
-  private show = false;
+  private disabled = true;
+  private show = true;
   private percentVisibleThreshold = 0; // Porcentagem de visibilidade desejada
   private additionalOffset = 5; // Deslocamento adicional em pixels
 
@@ -13,12 +14,18 @@ export class SectionAnimationShowDirective implements OnInit {
   }
 
   ngOnInit() {
+    // caso o javascript esteja ativado
+    this.disabled = false;
+
     this.elementRef.nativeElement.style.setProperty('--_anim-delay-index', `${this.delayIndex}`);
     this.onWindowScroll();
   }
 
   @HostListener('window:scroll')
   onWindowScroll() {
+    if (this.disabled)
+      return;
+
     const percentVisibleThreshold = this.percentVisibleThreshold / 100;
     const additionalOffset = this.additionalOffset;
 

@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit{
-  title = 'Template-GreenThumb';
+  title = 'GreenThumb';
 
   ngAfterViewInit(): void {
   }
