@@ -14,6 +14,7 @@ export const environmentDefault = {
       lifestyle.`
     },
     feature: {
+      sideImgSrc: '/assets/images/feature-section/banner.jpg',
       title: `Discover our wide range of sustainable gardening products and tips`,
       body: `Transform your garden into an eco-friendly paradise with our sustainable
       gardening products and expert tips. Learn more or make a purchase today!`,
@@ -29,7 +30,6 @@ export const environmentDefault = {
           garden.`
         },
       ] as Card[],
-      sideImgSrc: ''
     },
     featureList: {
       title: `Discover the Benefits of Sustainable Gardening`,
@@ -43,21 +43,22 @@ export const environmentDefault = {
         {
           title: 'Environmental Impact',
           body: 'Reduce your carbon footprint and conserve resources.',
-          imgSrc: '/assets/images/pablita-gardener-inspecting-plants-with-magnifying-glass.png'
+          imgSrc: '/assets/images/feature-list-section/card-1.jpg'
         },
         {
           title: 'Health Benefits',
           body: 'Stay active and improve mental well-being.',
-          imgSrc: '/assets/images/pablita-woman-watering-plants-in-garden.png'
+          imgSrc: '/assets/images/feature-list-section/card-2.jpg'
         },
         {
           title: 'Cost Savings',
           body: 'Save money on groceries by growing your own food.',
-          imgSrc: '/assets/images/pablita-woman-gardener.png'
+          imgSrc: '/assets/images/feature-list-section/card-3.jpg'
         },
       ] as Partial<FeatureCard>[]
     },
     benefits: {
+      sideImgSrc: '/assets/images/benefits-section/banner.jpg',
       title: `Discover the Benefits of Sustainable Gardening`,
       subtitle: `Eco-friendly`,
       body: `Using sustainable gardening products and techniques not only helps
@@ -100,7 +101,7 @@ export const environmentDefault = {
       ] as Partial<StatsCard>[]
     },
     testimonials: {
-      bannerImgPath: '',
+      bannerImgPath: '/assets/images/testimonials-section/banner.jpg',
       cards: [
         {
           review: 5,
@@ -133,7 +134,7 @@ export const environmentDefault = {
       tips to create your own nature-connected oasis.`
     },
     newsletter: {
-      bgImgSrc: '/assets/images/hero-bg.jpg',
+      bgImgSrc: '/assets/images/newsletter-bg.jpg',
       title: `Get Gardening Tips and Offers`,
       body: `Subscribe to our newsletter for the latest gardening tips, updates, and
       exclusive offers.`
