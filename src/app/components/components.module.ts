@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { DefaultInputComponent } from './default-input/default-input.component';
 import { FooterComponent } from './footer/footer.component';
 import { DirectivesModule } from '../directives/directives.module';
+import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.component';
 
 
 
@@ -17,14 +18,16 @@ import { DirectivesModule } from '../directives/directives.module';
     DefaultButtonComponent,
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderSpinnerComponent
   ],
   exports: [
     NavbarComponent,
     DefaultButtonComponent,
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderSpinnerComponent
   ],
   imports: [
     CommonModule,

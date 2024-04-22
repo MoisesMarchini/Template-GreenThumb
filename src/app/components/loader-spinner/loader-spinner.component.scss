@@ -1,0 +1,44 @@
+:host {
+  --anim-duration: 2s;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: linear-gradient(220.55deg, #e0ff87 0.01%, #8fb85b 100%);
+  display: grid;
+  place-content: center;
+  animation: opa0 calc(var(--anim-duration) * 0.5) var(--anim-duration) linear forwards;
+}
+
+.icon {
+  display: grid;
+  place-content: center;
+  width: calc(clamp(4rem, 10vw, 10rem) + 5rem);
+  height: calc(clamp(4rem, 10vw, 10rem) + 5rem);
+  font-size: clamp(4rem, 10vw, 10rem);
+  background: var(--white);
+  border-radius: 50vw;
+  color: var(--primary-light);
+  animation: iconAnim var(--anim-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes iconAnim {
+  0%,
+  100% {
+    opacity: 0;
+    transform: rotate(-48deg) scale(0);
+  }
+  40%,
+  80% {
+    opacity: 1;
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+@keyframes opa0 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

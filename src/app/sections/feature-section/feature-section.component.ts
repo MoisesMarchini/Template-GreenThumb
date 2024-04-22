@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class FeatureSectionComponent {
   sectionProps = {
-    sideImgSrc: '/assets/images/pablita-gardener-inspecting-plants-with-magnifying-glass.png'
+    sideImgSrc: ''
   }
 }

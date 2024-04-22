@@ -42,7 +42,7 @@ export class DefaultButtonComponent {
   @Input() type: 'submit' | 'button' = 'button';
   @Input() fontawesomeIcon: string = '';
   @Input() outline: boolean = false;
-  @Input() btnColor: string = 'dark';
+  @Input() btnColor: string = 'primary';
   @Input() customClass: string = '';
   @Input() disabled: boolean = false;
   @Input() hideLabelOnMobile: boolean = false;

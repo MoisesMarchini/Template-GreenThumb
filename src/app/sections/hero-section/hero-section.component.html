@@ -1,13 +1,35 @@
-<section>
-  <div class="container grid grid-rows-2 md:grid-rows-3 mx-auto gap-16">
-    <div class="content text-center flex flex-col items-center mx-auto gap-8 max-w-xl">
-      <h1 class="text-5xl font-bold">Embrace Nature with Sustainable Gardening Solutions</h1>
-      <p>Discover the joy of sustainable gardening and create a nature-connected lifestyle.</p>
+<section [class]="getLayout('background') + ' flex relative'">
+  <div
+    [class]="
+      'container grow grid gap-16 mx-auto ' +
+      getLayout('column') +
+      (textColor ? ' text-' + textColor : '')
+    "
+  >
+    <div
+      class="content relative z-10 text-center flex flex-col items-center mx-auto gap-8 max-w-xl"
+    >
+      <h1 class="text-5xl font-bold">
+        Embrace Nature with Sustainable Gardening Solutions
+      </h1>
+      <p>
+        Discover the joy of sustainable gardening and create a nature-connected
+        lifestyle.
+      </p>
       <div class="btn-actions flex gap-3 mx-auto">
         <app-default-button>Learn More</app-default-button>
-        <app-default-button [outline]="true">Sign Up</app-default-button>
       </div>
     </div>
-    <app-placeholder-img-wrapper class="md:row-span-2"></app-placeholder-img-wrapper>
+    <app-placeholder-img-wrapper
+      [imgSrc]="heroProps.bgImgSrc"
+      [class]="
+        isHeroColumn
+          ? 'md:row-span-2'
+          : 'absolute inset-0 z-0 brightness-50 opacity-90 pointer-events-none'
+      "
+    ></app-placeholder-img-wrapper>
   </div>
+  <span class="scroll-down" [class.scrolled]="scrolled">
+    <i class="fa-solid fa-arrow-down icon"></i>
+  </span>
 </section>

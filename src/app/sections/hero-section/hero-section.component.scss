@@ -1,0 +1,52 @@
+section {
+  background: linear-gradient(220.55deg, #e0ff87 0.01%, #8fb85b 100%);
+  > .container {
+    margin-top: var(--nav-height);
+  }
+  overflow: hidden;
+}
+
+.scroll-down {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 3rem;
+  border-radius: 50vw;
+  width: 3rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  border: 1px solid;
+  color: var(--white);
+  opacity: 0.5;
+  transition: var(--default-animation-duration);
+  overflow: hidden;
+  &:hover {
+    opacity: 0.85;
+    transform: translateX(-50%) scale(1.05);
+  }
+  > .icon {
+    position: relative;
+    top: 50%;
+    animation: iconAnim 3s infinite linear;
+  }
+  &.scrolled {
+    transition: calc(var(--default-animation-duration) * 2);
+    transform: translateX(-50%) translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes iconAnim {
+  0% {
+    transform: translateY(-300%);
+  }
+  30%,
+  70% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
