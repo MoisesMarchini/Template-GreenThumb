@@ -17,7 +17,8 @@ export class SectionAnimationShowDirective implements OnInit {
     // caso o javascript esteja ativado
     this.disabled = false;
 
-    this.elementRef.nativeElement.style.setProperty('--_anim-delay-index', `${this.delayIndex}`);
+    if (window.outerWidth > 768)
+      this.elementRef.nativeElement.style.setProperty('--_anim-delay-index', `${this.delayIndex}`);
     this.onWindowScroll();
   }
 
