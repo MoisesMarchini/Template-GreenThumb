@@ -6,7 +6,7 @@ import { Testimonial } from "../app/models/testimonial";
 export const environmentDefault = {
   sectionProps: {
     hero: {
-      bgImgSrc: '/assets/images/hero-bg.jpg',
+      bgImgSrc: '/assets/images/banner-model-1.png',
       bgLayout: 'background' as 'column' | 'background',
       textColor: 'white',
       title: `Embrace Nature with Sustainable Gardening Solutions`,

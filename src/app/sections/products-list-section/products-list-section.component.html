@@ -1,0 +1,35 @@
+<section>
+  <div class="container grid mx-auto">
+    <div class="grid section-header">
+      <h3 class="font-semibold mb-6">
+        {{ sectionProps.subtitle }}
+      </h3>
+      <h2 class="font-bold text-5xl mb-10">
+        {{ sectionProps.title }}
+      </h2>
+      <div class="flex align-baseline justify-between gap-6">
+        <p class="mb-8">
+          {{ sectionProps.body }}
+        </p>
+        <app-default-button [outline]="true">Ver mais</app-default-button>
+      </div>
+    </div>
+    <ul
+      [class]="
+        (layout === 'grid'
+          ? 'grid grid-cols-2 md:grid-cols-4'
+          : 'flex overflow-auto') + ' gap-6'
+      "
+    >
+      <li [class.min-w-60]="layout === 'row'" *ngFor="let item of arrayTeste">
+        <app-product-card></app-product-card>
+      </li>
+    </ul>
+    <app-default-button
+      *ngIf="layout === 'grid'"
+      class="mx-auto mt-6"
+      [outline]="true"
+      >Ver mais</app-default-button
+    >
+  </div>
+</section>

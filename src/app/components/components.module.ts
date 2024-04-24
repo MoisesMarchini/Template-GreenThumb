@@ -9,6 +9,7 @@ import { DefaultInputComponent } from './default-input/default-input.component';
 import { FooterComponent } from './footer/footer.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 
 
@@ -19,6 +20,7 @@ import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.componen
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
     FooterComponent,
+    ProductCardComponent,
     LoaderSpinnerComponent
   ],
   exports: [
@@ -27,6 +29,7 @@ import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.componen
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
     FooterComponent,
+    ProductCardComponent,
     LoaderSpinnerComponent
   ],
   imports: [

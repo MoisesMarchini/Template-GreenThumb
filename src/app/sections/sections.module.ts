@@ -12,6 +12,7 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
 import { FAQSectionComponent } from './faq-section/faq-section.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { SectionAnimationShowDirective } from '../directives/section-animation-show.directive';
+import { ProductsListSectionComponent } from './products-list-section/products-list-section.component';
 
 
 
@@ -23,6 +24,7 @@ import { SectionAnimationShowDirective } from '../directives/section-animation-s
     CTASectionComponent,
     NewsletterSectionComponent,
     FAQSectionComponent,
+    ProductsListSectionComponent,
   ],
   exports: [
     HeroSectionComponent,
@@ -31,6 +33,7 @@ import { SectionAnimationShowDirective } from '../directives/section-animation-s
     CTASectionComponent,
     NewsletterSectionComponent,
     FAQSectionComponent,
+    ProductsListSectionComponent,
     BenefitsSectionModule,
     FeatureListSectionModule,
     StatsSectionModule
