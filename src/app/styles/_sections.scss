@@ -12,11 +12,17 @@ section,
   --_anim-delay-value: calc(var(--_anim-duration) * 0.25);
   --_anim-delay: calc(var(--_anim-delay-index) * var(--_anim-delay-value));
 
-  transition:
-    opacity var(--_anim-duration),
-    transform var(--_anim-duration);
+  transition: opacity var(--_anim-duration), transform var(--_anim-duration);
   transition-timing-function: ease-out;
   transition-delay: var(--_anim-delay);
+}
+
+@media (max-width: 768px) {
+  section,
+  .section,
+  .show-anim {
+    --_anim-delay-value: 0s;
+  }
 }
 
 .hide-section {

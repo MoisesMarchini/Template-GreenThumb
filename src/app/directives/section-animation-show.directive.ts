@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: 'section, .show-anim',
+  selector: 'section, .show-anim, .section',
 })
 export class SectionAnimationShowDirective implements OnInit {
   @Input() delayIndex: number = 0;
@@ -17,15 +17,13 @@ export class SectionAnimationShowDirective implements OnInit {
   private show = true;
   private percentVisibleThreshold = 0; // Porcentagem de visibilidade desejada
   private additionalOffset = 5; // Deslocamento adicional em pixels
-  private scrollPosition = 0;
 
   constructor(
     private elementRef: ElementRef<HTMLElement>,
     private windowScrollService: WindowScrollService
   ) {
     windowScrollService.$scrollY.subscribe((y) => {
-      this.scrollPosition = y;
-      this.onWindowScroll();
+      this.onWindowScroll(y);
     });
   }
 
@@ -42,7 +40,7 @@ export class SectionAnimationShowDirective implements OnInit {
     this.onWindowScroll();
   }
 
-  onWindowScroll() {
+  onWindowScroll(scrollY: number = 0) {
     if (this.disabled) return;
 
     const percentVisibleThreshold = this.percentVisibleThreshold / 100;
@@ -50,7 +48,7 @@ export class SectionAnimationShowDirective implements OnInit {
 
     const element = this.elementRef.nativeElement;
     const viewportHeight = window.innerHeight;
-    const scrollPosition = this.scrollPosition;
+    const scrollPosition = scrollY;
 
     const elementRect = element.getBoundingClientRect();
     const elementTop = elementRect.top + scrollPosition + additionalOffset;
