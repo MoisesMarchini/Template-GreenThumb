@@ -1,12 +1,13 @@
 <header
   [class]="
-    'py-3 fixed w-full top-0 z z-50 ' +
-    (isSticked ? 'shadow-lg sticked' : 'text-white')
+    'py-3 ' +
+    (isSticked ? 'shadow-lg sticked ' : ' ') +
+    (alwaysFixed ? 'always-fixed' : ' ')
   "
 >
   <div class="nav-container container mx-auto">
     <div class="flex items-baseline gap-10">
-      <h1 class="logo text-lg font-medium">Logo</h1>
+      <h1 class="logo text-lg font-medium"><a routerLink="/">Logo</a></h1>
       <div class="btn-actions flex gap-3 ml-auto">
         <app-default-button
           [btnColor]="'dark'"

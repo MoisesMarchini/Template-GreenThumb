@@ -1,7 +1,7 @@
 section,
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: min(var(--nav-height), 5rem);
+  padding-bottom: min(var(--nav-height), 5rem);
 }
 
 section,
@@ -12,9 +12,7 @@ section,
   --_anim-delay-value: calc(var(--_anim-duration) * 0.25);
   --_anim-delay: calc(var(--_anim-delay-index) * var(--_anim-delay-value));
 
-  transition:
-    opacity var(--_anim-duration),
-    transform var(--_anim-duration);
+  transition: opacity var(--_anim-duration), transform var(--_anim-duration);
   transition-timing-function: ease-out;
   transition-delay: var(--_anim-delay);
 }

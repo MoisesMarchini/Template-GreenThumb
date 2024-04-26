@@ -10,8 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-
-
+import { BreadcumbComponent } from './breadcumb/breadcumb.component';
+import { InputSelectComponent } from './input-select/input-select.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,9 @@ import { ProductCardComponent } from './product-card/product-card.component';
     DefaultInputComponent,
     FooterComponent,
     ProductCardComponent,
-    LoaderSpinnerComponent
+    LoaderSpinnerComponent,
+    BreadcumbComponent,
+    InputSelectComponent,
   ],
   exports: [
     NavbarComponent,
@@ -30,13 +32,10 @@ import { ProductCardComponent } from './product-card/product-card.component';
     DefaultInputComponent,
     FooterComponent,
     ProductCardComponent,
-    LoaderSpinnerComponent
+    LoaderSpinnerComponent,
+    BreadcumbComponent,
+    InputSelectComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    DirectivesModule
-  ]
+  imports: [CommonModule, RouterModule, FormsModule, DirectivesModule],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Card } from '../../models/card';
+import { Card } from '../../shared/models/card';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -8,5 +8,5 @@ import { environment } from '../../../environments/environment';
   styleUrl: './benefits-section.component.scss',
 })
 export class BenefitsSectionComponent {
-  sectionProps = environment.sectionProps.benefits
+  sectionProps = environment.sectionProps.benefits;
 }

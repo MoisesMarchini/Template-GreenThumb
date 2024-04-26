@@ -18,9 +18,13 @@
         <app-default-button [btnColor]="'dark'">Learn More</app-default-button>
       </div>
     </div>
-    <app-placeholder-img-wrapper
-      [imgSrc]="sectionProps.bgImgSrc"
-    ></app-placeholder-img-wrapper>
+    <div class="placeholder-img-wrapper">
+      <app-placeholder-img-wrapper
+        class="h-full"
+        [imgSrc]="sectionProps.bgImgSrc"
+        [customImgCss]="'h-full'"
+      ></app-placeholder-img-wrapper>
+    </div>
   </div>
   <span class="scroll-down" [class.scrolled]="scrolled">
     <i class="fa-solid fa-arrow-down icon"></i>

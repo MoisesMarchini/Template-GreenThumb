@@ -1,7 +1,8 @@
-import { Card } from "../app/models/card";
-import { FeatureCard } from "../app/models/feature-card";
-import { StatsCard } from "../app/models/stats-card";
-import { Testimonial } from "../app/models/testimonial";
+import { Card } from '../app/shared/models/card';
+import { FeatureCard } from '../app/shared/models/feature-card';
+import { Product } from '../app/shared/models/product';
+import { StatsCard } from '../app/shared/models/stats-card';
+import { Testimonial } from '../app/shared/models/testimonial';
 
 export const environmentDefault = {
   sectionProps: {
@@ -9,9 +10,8 @@ export const environmentDefault = {
       bgImgSrc: '/assets/images/banner-model-1.png',
       bgLayout: 'background' as 'column' | 'background',
       textColor: 'white',
-      title: `Embrace Nature with Sustainable Gardening Solutions`,
-      subtitle: `Discover the joy of sustainable gardening and create a nature-connected
-      lifestyle.`
+      title: `Discover the Latest Fashion Trends for You`,
+      subtitle: `Explore our collection of stylish and trendy clothing items that will make you stand out from the crowd.`,
     },
     feature: {
       sideImgSrc: '/assets/images/feature-section/banner.jpg',
@@ -22,12 +22,12 @@ export const environmentDefault = {
         {
           title: `Explore Nature`,
           body: `Find everything you need to create a beautiful and sustainable
-          garden.`
+          garden.`,
         },
         {
           title: `Explore Nature`,
           body: `Find everything you need to create a beautiful and sustainable
-          garden.`
+          garden.`,
         },
       ] as Card[],
     },
@@ -43,19 +43,19 @@ export const environmentDefault = {
         {
           title: 'Environmental Impact',
           body: 'Reduce your carbon footprint and conserve resources.',
-          imgSrc: '/assets/images/feature-list-section/card-1.jpg'
+          imgSrc: '/assets/images/feature-list-section/card-1.jpg',
         },
         {
           title: 'Health Benefits',
           body: 'Stay active and improve mental well-being.',
-          imgSrc: '/assets/images/feature-list-section/card-2.jpg'
+          imgSrc: '/assets/images/feature-list-section/card-2.jpg',
         },
         {
           title: 'Cost Savings',
           body: 'Save money on groceries by growing your own food.',
-          imgSrc: '/assets/images/feature-list-section/card-3.jpg'
+          imgSrc: '/assets/images/feature-list-section/card-3.jpg',
         },
-      ] as Partial<FeatureCard>[]
+      ] as Partial<FeatureCard>[],
     },
     benefits: {
       sideImgSrc: '/assets/images/benefits-section/banner.jpg',
@@ -67,14 +67,14 @@ export const environmentDefault = {
       you can create a thriving ecosystem and contribute to a greener future.`,
       cards: [
         {
-          title: "Healthier Plants",
-          body: 'Our sustainable gardening products provide essential nutrients and support natural pest control.'
+          title: 'Healthier Plants',
+          body: 'Our sustainable gardening products provide essential nutrients and support natural pest control.',
         },
         {
-          title: "Greener Future",
-          body: 'By choosing sustainable gardening practices, you contribute to a healthier planet for future generations.'
+          title: 'Greener Future',
+          body: 'By choosing sustainable gardening practices, you contribute to a healthier planet for future generations.',
         },
-      ] as Card[]
+      ] as Card[],
     },
     stats: {
       title: `Discover the Positive Impact of Sustainable Gardening`,
@@ -86,19 +86,19 @@ export const environmentDefault = {
         {
           title: 'Healthier Gardens, Happier Earth',
           body: 'Reduction in chemical usage for a greener environment',
-          value: '30%'
+          value: '30%',
         },
         {
           title: 'Thriving Ecosystems, Stronger Communities',
           body: 'Increase in local biodiversity for a sustainable future',
-          value: '30%'
+          value: '30%',
         },
         {
           title: 'Healthy Harvest, Happy People',
           body: 'Higher yield of organic produce for healthier living',
-          value: '30%'
+          value: '30%',
         },
-      ] as Partial<StatsCard>[]
+      ] as Partial<StatsCard>[],
     },
     testimonials: {
       bannerImgPath: '/assets/images/testimonials-section/banner.jpg',
@@ -120,24 +120,25 @@ export const environmentDefault = {
           body: `These gardening products have made such a difference in my life! Not only are they eco-friendly, but they're also incredibly effective. I can't imagine gardening without them now.`,
           userName: 'Sarah Thompson',
           userOccupation: 'Environmental Scientist',
-        },{
+        },
+        {
           review: 4.5,
           body: `The customer service provided by this company is outstanding. They were incredibly helpful and responsive throughout the entire process. I'm very satisfied!`,
           userName: 'Emily Davis',
           userOccupation: 'Business Owner, Davis Designs',
         },
-      ] as Partial<Testimonial>[]
+      ] as Partial<Testimonial>[],
     },
     cta: {
       title: `Start Your Gardening Journey`,
       body: `Discover our wide range of sustainable gardening products and get expert
-      tips to create your own nature-connected oasis.`
+      tips to create your own nature-connected oasis.`,
     },
     newsletter: {
       bgImgSrc: '/assets/images/newsletter-bg.jpg',
       title: `Get Gardening Tips and Offers`,
       body: `Subscribe to our newsletter for the latest gardening tips, updates, and
-      exclusive offers.`
+      exclusive offers.`,
     },
     faq: {
       title: `Frequently Asked Questions`,
@@ -145,30 +146,39 @@ export const environmentDefault = {
       products effectively.`,
       bottomCard: {
         title: `Still have questions?`,
-        body: `Contact us for further assistance.`
+        body: `Contact us for further assistance.`,
       },
       cards: [
         {
           title: 'How do I start?',
-          body: 'To start your sustainable gardening journey, assess your available space, research suitable plants, and create a plan for maintenance.'
+          body: 'To start your sustainable gardening journey, assess your available space, research suitable plants, and create a plan for maintenance.',
         },
         {
           title: 'What tools do I need?',
-          body: `Basic tools for sustainable gardening include a trowel, pruners, watering can, and compost bin. Additional tools may be required based on your specific needs.`
+          body: `Basic tools for sustainable gardening include a trowel, pruners, watering can, and compost bin. Additional tools may be required based on your specific needs.`,
         },
         {
           title: `How often should I water?`,
-          body: `The frequency of watering depends on various factors such as plant type, weather conditions, and soil moisture levels. Generally, aim to keep the soil evenly moist, but not waterlogged.`
+          body: `The frequency of watering depends on various factors such as plant type, weather conditions, and soil moisture levels. Generally, aim to keep the soil evenly moist, but not waterlogged.`,
         },
         {
           title: `How do I prevent pests?`,
-          body: `Implementing natural pest control methods like companion planting, using organic pesticides, and maintaining a healthy garden ecosystem can help prevent pests.`
+          body: `Implementing natural pest control methods like companion planting, using organic pesticides, and maintaining a healthy garden ecosystem can help prevent pests.`,
         },
         {
           title: `How do I compost?`,
-          body: `Composting involves collecting organic waste materials like kitchen scraps, yard trimmings, and leaves in a compost bin. Regularly turn the compost to facilitate decomposition.`
+          body: `Composting involves collecting organic waste materials like kitchen scraps, yard trimmings, and leaves in a compost bin. Regularly turn the compost to facilitate decomposition.`,
         },
-      ] as Card[]
+      ] as Card[],
     },
-  }
-}
+  },
+  products: [
+    {
+      id: '1',
+      name: `Nome do produto`,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.`,
+      reviews: [5, 4, 5, 5],
+      price: 99.99,
+    },
+  ] as Product[],
+};

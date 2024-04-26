@@ -1,0 +1,19 @@
+.review-stars {
+  --_single-width: 1.127rem;
+  background: url("/assets/images/star.svg");
+  height: 1rem;
+  background-repeat: repeat-x;
+  width: calc(var(--_single-width) * 5);
+  display: block;
+  position: relative;
+  &::before {
+    content: "";
+    background: url("/assets/images/star-filled.svg");
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: calc(var(--_single-width) * 4);
+  }
+}

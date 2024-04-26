@@ -1,7 +1,21 @@
+:host {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
 header {
+  vertical-align: middle;
+  height: var(--nav-height);
   transition: var(--default-animation-duration);
+  color: white;
   // border-bottom: 1px solid transparent;
+  &.always-fixed {
+    transition: none !important;
+  }
   &.sticked {
+    color: inherit;
     background-color: var(--body-bg);
     // border-color: ;
   }

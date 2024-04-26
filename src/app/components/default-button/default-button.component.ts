@@ -7,13 +7,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         [routerLink]="routerLink"
         [target]="target"
         [class]="
-          'flex text-sm items-center content-center w-full gap-2 btn btn-' +
+          'flex text-sm items-center justify-center content-center w-full gap-2 btn btn-' +
           btnClass()
         "
       >
         <ng-content></ng-content>
         <i *ngIf="!!fontawesomeIcon" [class]="fontawesomeIcon"></i>
-        <span *ngIf="!!label" [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''">
+        <span
+          *ngIf="!!label"
+          [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''"
+        >
           {{ label }}
         </span>
       </a>
@@ -24,18 +27,21 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         [disabled]="disabled"
         (click)="onClick()"
         [class]="
-          'flex text-sm items-center content-center w-full gap-2 btn btn-' +
+          'flex text-sm items-center justify-center content-center w-full gap-2 btn btn-' +
           btnClass()
         "
       >
         <ng-content></ng-content>
         <i *ngIf="!!fontawesomeIcon" [class]="fontawesomeIcon"></i>
-        <span *ngIf="!!label" [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''">
+        <span
+          *ngIf="!!label"
+          [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''"
+        >
           {{ label }}
         </span>
       </button>
     </ng-template>`,
-  styleUrl: './default-button.component.scss'
+  styleUrl: './default-button.component.scss',
 })
 export class DefaultButtonComponent {
   @Input() label: string = '';
@@ -51,7 +57,9 @@ export class DefaultButtonComponent {
   @Output() _onClick: EventEmitter<any> = new EventEmitter<any>();
 
   btnClass() {
-    return (this.outline ? 'outline-' : '') + this.btnColor + ' ' + this.customClass;
+    return (
+      (this.outline ? 'outline-' : '') + this.btnColor + ' ' + this.customClass
+    );
   }
 
   onClick() {

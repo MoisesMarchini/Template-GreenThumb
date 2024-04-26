@@ -1,0 +1,47 @@
+<app-navbar [alwaysFixed]="true"></app-navbar>
+<main>
+  <section class="pt-4">
+    <div class="container mx-auto">
+      <app-breadcumb
+        [items]="[{ label: 'Categoria X', link: '/' }, { label: 'Produto Y' }]"
+      ></app-breadcumb>
+
+      <div class="layout grid md:grid-cols-2 gap-8 md:gap-16">
+        <div class="product-images">
+          <app-placeholder-img-wrapper
+            class="aspect-square"
+          ></app-placeholder-img-wrapper>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="font-bold text-4xl mb-2">
+            {{ product.name }}
+          </h2>
+          <h3 class="font-semibold mb-4">
+            {{ product.price | currency }}
+          </h3>
+          <div class="review-stars-wrapper relative mb-6">
+            <span class="review-stars"></span>
+          </div>
+          <p class="mb-6">
+            {{ product.description }}
+          </p>
+          <app-input-select
+            class="mb-6"
+            [label]="'Variant'"
+            [options]="getSelectionOptions()"
+          ></app-input-select>
+          <app-input-select
+            class="mb-6"
+            [label]="'Variant'"
+            [options]="getSelectionOptions()"
+          ></app-input-select>
+          <div class="btn-actions grid gap-3">
+            <app-default-button>Add to Cart</app-default-button>
+            <app-default-button [outline]="true">Buy Now</app-default-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

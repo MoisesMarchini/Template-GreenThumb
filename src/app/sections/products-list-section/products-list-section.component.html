@@ -1,18 +1,20 @@
 <section>
   <div class="container grid mx-auto">
-    <div class="grid section-header">
-      <h3 class="font-semibold mb-6">
-        {{ sectionProps.subtitle }}
-      </h3>
-      <h2 class="font-bold text-5xl mb-10">
-        {{ sectionProps.title }}
-      </h2>
-      <div class="flex align-baseline justify-between gap-6">
-        <p class="mb-8">
+    <div class="flex items-end gap-6 section-header justify-between mb-8">
+      <div class="grid">
+        <h3 class="font-semibold mb-3 text-xs">
+          {{ sectionProps.subtitle }}
+        </h3>
+        <h2 class="font-bold text-4xl mb-2">
+          {{ sectionProps.title }}
+        </h2>
+        <p>
           {{ sectionProps.body }}
         </p>
-        <app-default-button [outline]="true">Ver mais</app-default-button>
       </div>
+      <app-default-button class="hidden md:block" [outline]="true"
+        >Ver mais</app-default-button
+      >
     </div>
     <ul
       [class]="

@@ -1,0 +1,19 @@
+<nav aria-label="breadcrumb" class="py-3 mb-3">
+  <ol class="breadcrumb flex flex-nowrap gap-3 text-xs font-medium">
+    <li class="breadcrumb-item flex gap-3 items-center">
+      <a routerLink="/home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+      <i class="fa-solid fa-chevron-right"></i>
+    </li>
+    <li
+      class="breadcrumb-item flex gap-3 items-center"
+      *ngFor="let item of items; let last = last"
+      [class.active]="last"
+    >
+      <a *ngIf="!last" [routerLink]="item.link">{{ item.label }}</a>
+      <i *ngIf="!last" class="fa-solid fa-chevron-right"></i>
+      <span *ngIf="last">{{ item.label }}</span>
+    </li>
+  </ol>
+</nav>

@@ -5,12 +5,6 @@
     customCss
   "
 >
-  <img
-    *ngIf="imgSrc"
-    [src]="imgSrc"
-    alt=""
-    class="w-full h-full object-cover"
-    srcset=""
-  />
-  <i *ngIf="!imgSrc" class="fa-solid fa-image text-9xl"></i>
+  <img *ngIf="imgSrc" [src]="imgSrc" alt="" [class]="customImgCss" srcset="" />
+  <i *ngIf="!imgSrc" class="fa-solid fa-image text-8xl"></i>
 </div>

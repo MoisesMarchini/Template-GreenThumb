@@ -1,9 +1,19 @@
 section {
+  margin-top: calc(-1 * var(--nav-height));
   background: linear-gradient(220.55deg, #dd7bff 0%, #ff6c6c 100%);
   > .container {
     margin-top: var(--nav-height);
   }
   overflow: hidden;
+}
+
+.content {
+  text-shadow: 2px 2px 6px var(--primary-dark);
+}
+
+.placeholder-img-wrapper {
+  margin-top: calc(-1 * var(--nav-height));
+  max-height: calc(100svh - var(--nav-height));
 }
 
 .scroll-down {
