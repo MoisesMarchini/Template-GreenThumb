@@ -3,3 +3,9 @@
   padding-left: calc(var(--_base-padding-x) * 0.5);
   padding-right: calc(var(--_base-padding-x) * 0.5);
 }
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
