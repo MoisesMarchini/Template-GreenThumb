@@ -19,6 +19,14 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+.visibility-hidden {
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
 @media (min-width: 768px) {
   :root {
     font-size: 16px;
