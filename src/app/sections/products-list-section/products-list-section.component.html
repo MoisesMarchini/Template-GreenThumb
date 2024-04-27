@@ -16,17 +16,44 @@
         >Ver mais</app-default-button
       >
     </div>
-    <ul
-      [class]="
-        (layout === 'grid'
-          ? 'grid grid-cols-2 md:grid-cols-4'
-          : 'flex overflow-auto') + ' gap-6'
-      "
-    >
-      <li [class.min-w-60]="layout === 'row'" *ngFor="let item of arrayTeste">
-        <app-product-card></app-product-card>
-      </li>
-    </ul>
+    <div class="list-wrapper grid relative overflow-hidden">
+      <ul
+        #productList
+        [class]="
+          (layout === 'grid'
+            ? 'grid grid-cols-2 md:grid-cols-4'
+            : 'flex overflow-auto no-scrollbar') + ' gap-6 transition-all'
+        "
+        style="scroll-behavior: smooth; scroll-snap-type: x"
+      >
+        <li
+          style="scroll-snap-align: center"
+          [class.min-w-60]="layout === 'row'"
+          *ngFor="let item of arrayTeste; let i = index"
+          #productItem
+        >
+          <app-product-card
+            [product]="products[i % products.length]"
+          ></app-product-card>
+        </li>
+      </ul>
+      <div class="control-group flex gap-2 ms-auto" *ngIf="layout === 'row'">
+        <app-default-button
+          [customClass]="'w-9 p-0 aspect-square rounded-full'"
+          [outline]="true"
+          [btnColor]="'dark'"
+          (_onClick)="scrollLeft()"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></app-default-button>
+        <app-default-button
+          [customClass]="'w-9 p-0 aspect-square rounded-full'"
+          [outline]="true"
+          [btnColor]="'dark'"
+          (_onClick)="scrollRight()"
+          ><i class="fa-solid fa-arrow-right"></i
+        ></app-default-button>
+      </div>
+    </div>
     <app-default-button
       *ngIf="layout === 'grid'"
       class="mx-auto mt-6"

@@ -175,7 +175,28 @@ export const environmentDefault = {
   products: [
     {
       id: '1',
-      name: `Nome do produto`,
+      name: `Nome do produto 1`,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.`,
+      reviews: [5, 4, 5, 5],
+      price: 9.99,
+    },
+    {
+      id: '2',
+      name: `Nome do produto 2`,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.`,
+      reviews: [1, 4, 3, 2],
+      price: 99.99,
+    },
+    {
+      id: '3',
+      name: `Nome do produto 3`,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.`,
+      reviews: [5, 4, 5, 5],
+      price: 99.99,
+    },
+    {
+      id: '4',
+      name: `Nome do produto 4`,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.`,
       reviews: [5, 4, 5, 5],
       price: 99.99,

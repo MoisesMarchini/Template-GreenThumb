@@ -4,6 +4,7 @@
     (!imgSrc ? 'bg-gray-200 text-gray-400 ' : '') +
     customCss
   "
+  style="aspect-ratio: var(--_aspect-ratio)"
 >
   <img *ngIf="imgSrc" [src]="imgSrc" alt="" [class]="customImgCss" srcset="" />
   <i *ngIf="!imgSrc" class="fa-solid fa-image text-8xl"></i>

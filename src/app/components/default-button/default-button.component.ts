@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         [routerLink]="routerLink"
         [target]="target"
         [class]="
-          'flex text-sm items-center justify-center content-center w-full gap-2 btn btn-' +
+          'flex text-sm items-center justify-center content-center gap-2 btn btn-' +
           btnClass()
         "
       >
@@ -27,7 +27,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         [disabled]="disabled"
         (click)="onClick()"
         [class]="
-          'flex text-sm items-center justify-center content-center w-full gap-2 btn btn-' +
+          'flex text-sm items-center justify-center content-center gap-2 btn btn-' +
           btnClass()
         "
       >

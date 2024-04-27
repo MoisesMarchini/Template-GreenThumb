@@ -1,6 +1,6 @@
 <header
   [class]="
-    'py-3 ' +
+    'py-3 flex items-center ' +
     (isSticked ? 'shadow-lg sticked ' : ' ') +
     (alwaysFixed ? 'always-fixed' : ' ')
   "
@@ -11,7 +11,7 @@
       <div class="btn-actions flex gap-3 ml-auto">
         <app-default-button
           [btnColor]="'dark'"
-          [customClass]="'rounded-full p-0 justify-center aspect-square'"
+          [customClass]="'rounded-full p-0 justify-center aspect-square w-9'"
         >
           <i class="fa-solid fa-cart-shopping"></i>
         </app-default-button>

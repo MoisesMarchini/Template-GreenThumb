@@ -1,19 +1,20 @@
 import { Component, Input, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { SelectOption } from '../input-select/input-select.component';
 
 @Component({
-  selector: 'app-input-select',
-  templateUrl: './input-select.component.html',
-  styleUrl: './input-select.component.scss',
+  selector: 'app-input-radio',
+  templateUrl: './input-radio.component.html',
+  styleUrl: './input-radio.component.scss',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputSelectComponent),
+      useExisting: forwardRef(() => InputRadioComponent),
       multi: true,
     },
   ],
 })
-export class InputSelectComponent implements ControlValueAccessor {
+export class InputRadioComponent implements ControlValueAccessor {
   @Input() disabled: boolean = false;
   @Input() options: SelectOption[] = [];
   @Input() name: string = '';
@@ -49,9 +50,10 @@ export class InputSelectComponent implements ControlValueAccessor {
   setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }
-}
 
-export interface SelectOption {
-  label: string;
-  value: any;
+  onRadioChange(option: any): void {
+    this.value = option;
+    this.onChange(option);
+    this.onTouch();
+  }
 }

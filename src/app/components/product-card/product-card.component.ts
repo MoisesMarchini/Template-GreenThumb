@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../shared/models/product';
 
 @Component({
@@ -7,7 +7,7 @@ import { Product } from '../../shared/models/product';
   styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
-  product: Partial<Product> = {
+  @Input() product: Partial<Product> = {
     id: '1',
     name: `Nome do produto`,
     description: `Short description`,

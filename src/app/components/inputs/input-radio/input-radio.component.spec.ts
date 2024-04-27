@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CTASectionComponent } from './cta-section.component';
+import { InputRadioComponent } from './input-radio.component';
 
-describe('CTASectionComponent', () => {
-  let component: CTASectionComponent;
-  let fixture: ComponentFixture<CTASectionComponent>;
+describe('InputRadioComponent', () => {
+  let component: InputRadioComponent;
+  let fixture: ComponentFixture<InputRadioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CTASectionComponent]
+      imports: [InputRadioComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CTASectionComponent);
+    fixture = TestBed.createComponent(InputRadioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

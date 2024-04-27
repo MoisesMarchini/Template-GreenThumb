@@ -17,10 +17,13 @@
             {{ product.name }}
           </h2>
           <h3 class="font-semibold mb-4">
-            {{ product.price | currency }}
+            {{ product.price | currency : "BRL" }}
           </h3>
           <div class="review-stars-wrapper relative mb-6">
-            <span class="review-stars"></span>
+            <span
+              class="review-stars"
+              [style]="'--_stars-filled: ' + getReviewStars()"
+            ></span>
           </div>
           <p class="mb-6">
             {{ product.description }}
@@ -30,18 +33,25 @@
             [label]="'Variant'"
             [options]="getSelectionOptions()"
           ></app-input-select>
-          <app-input-select
+          <app-input-radio
             class="mb-6"
-            [label]="'Variant'"
+            name="teste"
+            label="Variant 2"
             [options]="getSelectionOptions()"
-          ></app-input-select>
+          ></app-input-radio>
           <div class="btn-actions grid gap-3">
-            <app-default-button>Add to Cart</app-default-button>
-            <app-default-button [outline]="true">Buy Now</app-default-button>
+            <app-default-button [customClass]="'w-full'"
+              >Add to Cart</app-default-button
+            >
+            <app-default-button [customClass]="'w-full'" [outline]="true"
+              >Buy Now</app-default-button
+            >
           </div>
         </div>
       </div>
     </div>
   </section>
+  <app-products-list-section [layout]="'row'"></app-products-list-section>
+  <app-products-list-section [layout]="'row'"></app-products-list-section>
 </main>
 <app-footer></app-footer>

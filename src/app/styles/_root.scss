@@ -1,12 +1,22 @@
 :root {
   --default-animation-duration: 300ms;
-  --nav-height: 74px;
+  --nav-height: 64px;
   font-size: 14px;
 }
 
 body {
   background-color: var(--body-bg);
   color: var(--default-text-color);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @media (min-width: 768px) {

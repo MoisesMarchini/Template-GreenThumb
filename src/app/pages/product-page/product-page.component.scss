@@ -1,5 +1,6 @@
 .review-stars {
   --_single-width: 1.127rem;
+  --_stars-filled: 0;
   background: url("/assets/images/star.svg");
   height: 1rem;
   background-repeat: repeat-x;
@@ -14,6 +15,6 @@
     top: 0;
     left: 0;
     height: 1rem;
-    width: calc(var(--_single-width) * 4);
+    width: calc(var(--_single-width) * var(--_stars-filled));
   }
 }

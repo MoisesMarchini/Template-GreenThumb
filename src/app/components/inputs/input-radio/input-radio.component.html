@@ -1,0 +1,23 @@
+<div class="grid">
+  <span class="mb-2"> {{ label }} </span>
+  <div class="flex gap-4">
+    <label
+      *ngFor="let option of options"
+      class="radio-option btn btn-outline-dark"
+      [class.disabled]="option.disabled || disabled"
+      [class.active]="value === option.value"
+    >
+      <span class="font-normal">
+        {{ option.label }}
+      </span>
+      <input
+        type="radio"
+        class="hidden"
+        [value]="option.value"
+        (change)="onRadioChange(option.value)"
+        [checked]="value === option.value"
+        [disabled]="disabled"
+      />
+    </label>
+  </div>
+</div>

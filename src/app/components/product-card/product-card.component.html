@@ -1,14 +1,24 @@
 <a [routerLink]="'/product/' + product.id" class="card grid">
-  <app-placeholder-img-wrapper class="h-80 mb-4"></app-placeholder-img-wrapper>
+  <app-placeholder-img-wrapper
+    class="mb-4"
+    style="--_aspect-ratio: 9/12"
+  ></app-placeholder-img-wrapper>
   <div class="card-content grid">
     <h6 class="font-semibold">
       {{ product.name }}
     </h6>
-    <p class="text-xs mb-3">
+    <p
+      class="text-xs mb-3 text-ellipsis h-8 overflow-clip"
+      style="
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      "
+    >
       {{ product.description }}
     </p>
     <p class="font-semibold text-xl mb-6">
-      {{ product.price }}
+      {{ product.price | currency : "BRL" }}
     </p>
   </div>
 </a>
