@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { Card } from '../../models/card';
 
 @Component({
   selector: 'app-feature-section',
   templateUrl: './feature-section.component.html',
-  styleUrl: './feature-section.component.scss'
+  styleUrl: './feature-section.component.scss',
 })
 export class FeatureSectionComponent {
-  sectionProps = environment.sectionProps.feature
+  @Input() sectionProps: FeatureSectionProps = environment.sectionProps.feature;
+}
+
+export interface FeatureSectionProps {
+  reversed?: boolean;
+  sideImgSrc: string;
+  subtitle: string;
+  title: string;
+  body?: string;
+  cards: Card[];
 }

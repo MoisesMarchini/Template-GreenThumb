@@ -1,5 +1,5 @@
 <section>
-  <div class="container mx-auto grid md:grid-cols-2 gap-6 md:gap-16">
+  <div class="w-full max-w-xl mx-auto grid gap-6 text-center">
     <h2 class="font-bold text-4xl">
       {{ sectionProps.title }}
     </h2>
@@ -7,9 +7,20 @@
       <p class="">
         {{ sectionProps.body }}
       </p>
-      <div class="btn-actions flex gap-3">
-        <app-default-button>Explore</app-default-button>
-        <app-default-button [outline]="true">Learn More</app-default-button>
+      <div
+        class="btn-actions flex gap-3 mx-auto"
+        *ngIf="sectionProps.actionButtons"
+      >
+        <app-default-button
+          [externalLink]="sectionProps.actionButtons.primaryButton.link"
+          [label]="sectionProps.actionButtons.primaryButton.label"
+        ></app-default-button>
+        <app-default-button
+          *ngIf="sectionProps.actionButtons.secondaryButton"
+          [externalLink]="sectionProps.actionButtons.secondaryButton.link"
+          [label]="sectionProps.actionButtons.secondaryButton.label"
+          [outline]="true"
+        ></app-default-button>
       </div>
     </div>
   </div>

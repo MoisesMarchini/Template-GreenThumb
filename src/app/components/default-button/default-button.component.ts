@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-default-button',
-  template: `<ng-container *ngIf="routerLink; else buttonTemplate">
+  template: `<ng-container *ngIf="routerLink">
       <a
         [routerLink]="routerLink"
         [target]="target"
@@ -13,12 +13,33 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       >
         <ng-content></ng-content>
         <i *ngIf="!!fontawesomeIcon" [class]="fontawesomeIcon"></i>
-        <span *ngIf="!!label" [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''">
+        <span
+          *ngIf="!!label"
+          [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''"
+        >
+          {{ label }}
+        </span>
+      </a> </ng-container
+    ><ng-container *ngIf="externalLink">
+      <a
+        [href]="externalLink"
+        target="_blank"
+        [class]="
+          'flex text-sm items-center content-center w-full gap-2 btn btn-' +
+          btnClass()
+        "
+      >
+        <ng-content></ng-content>
+        <i *ngIf="!!fontawesomeIcon" [class]="fontawesomeIcon"></i>
+        <span
+          *ngIf="!!label"
+          [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''"
+        >
           {{ label }}
         </span>
       </a>
     </ng-container>
-    <ng-template #buttonTemplate>
+    <ng-container *ngIf="!routerLink && !externalLink" #buttonTemplate>
       <button
         [type]="type"
         [disabled]="disabled"
@@ -30,12 +51,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       >
         <ng-content></ng-content>
         <i *ngIf="!!fontawesomeIcon" [class]="fontawesomeIcon"></i>
-        <span *ngIf="!!label" [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''">
+        <span
+          *ngIf="!!label"
+          [class]="hideLabelOnMobile ? 'd-none d-md-inline' : ''"
+        >
           {{ label }}
         </span>
       </button>
-    </ng-template>`,
-  styleUrl: './default-button.component.scss'
+    </ng-container> `,
+  styleUrl: './default-button.component.scss',
 })
 export class DefaultButtonComponent {
   @Input() label: string = '';
@@ -47,11 +71,14 @@ export class DefaultButtonComponent {
   @Input() disabled: boolean = false;
   @Input() hideLabelOnMobile: boolean = false;
   @Input() routerLink?: string;
+  @Input() externalLink?: string;
   @Input() target: '_self' | '_blank' = '_self';
   @Output() _onClick: EventEmitter<any> = new EventEmitter<any>();
 
   btnClass() {
-    return (this.outline ? 'outline-' : '') + this.btnColor + ' ' + this.customClass;
+    return (
+      (this.outline ? 'outline-' : '') + this.btnColor + ' ' + this.customClass
+    );
   }
 
   onClick() {

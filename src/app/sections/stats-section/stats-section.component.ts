@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { StatsCard } from '../../models/stats-card';
 import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-stats-section',
   templateUrl: './stats-section.component.html',
-  styleUrl: './stats-section.component.scss'
+  styleUrl: './stats-section.component.scss',
 })
 export class StatsSectionComponent {
-  sectionProps = environment.sectionProps.stats
+  @Input() sectionProps = environment.sectionProps.stats;
 }

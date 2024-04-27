@@ -4,6 +4,7 @@ import { ComponentsModule } from './components/components.module';
 import { SectionsModule } from './sections/sections.module';
 import { CommonModule } from '@angular/common';
 import { WindowScrollService } from './directives/window-scroll.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { WindowScrollService } from './directives/window-scroll.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements AfterViewInit {
-  title = 'GreenThumb';
+  title = 'PetPal';
+  customProps = environment.customProps;
 
   constructor(private scrollService: WindowScrollService) {}
 

@@ -1,14 +1,19 @@
 <app-navbar></app-navbar>
 <main>
   <app-hero-section></app-hero-section>
-  <app-feature-section></app-feature-section>
-  <app-feature-list-section></app-feature-list-section>
-  <app-benefits-section></app-benefits-section>
-  <app-stats-section></app-stats-section>
-  <app-testimonials-section></app-testimonials-section>
-  <app-cta-section></app-cta-section>
-  <app-newsletter-section></app-newsletter-section>
-  <app-faq-section></app-faq-section>
+  <app-feature-section
+    *ngFor="let props of customProps.featureSections"
+    [sectionProps]="props"
+  ></app-feature-section>
+  <app-benefits-section
+    *ngFor="let props of customProps.benefitsSections"
+    [sectionProps]="props"
+  ></app-benefits-section>
+  <app-cta-section [sectionProps]="customProps.ctaSection"></app-cta-section>
+  <app-testimonials-section
+    [sectionProps]="customProps.testimonialSection"
+  ></app-testimonials-section>
+  <app-faq-section [sectionProps]="customProps.faqSection"></app-faq-section>
 </main>
 <app-footer></app-footer>
 <!-- <app-loader-spinner></app-loader-spinner> -->

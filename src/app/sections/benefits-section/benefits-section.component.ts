@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Card } from '../../models/card';
 import { environment } from '../../../environments/environment';
 
@@ -8,5 +8,15 @@ import { environment } from '../../../environments/environment';
   styleUrl: './benefits-section.component.scss',
 })
 export class BenefitsSectionComponent {
-  sectionProps = environment.sectionProps.benefits
+  @Input() sectionProps: BenefitsSectionProps =
+    environment.sectionProps.benefits;
+}
+
+export interface BenefitsSectionProps {
+  reversed?: boolean;
+  sideImgSrc: string;
+  subtitle: string;
+  title: string;
+  body?: string;
+  cards: Card[];
 }
