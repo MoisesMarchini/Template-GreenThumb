@@ -140,11 +140,11 @@ export const environmentDefault = {
   },
   sectionProps: {
     hero: {
-      bgImgSrc: '/assets/images/hero-bg.jpg',
+      bgImgSrc: '/assets/images/hero-alt2.png',
       bgLayout: 'background' as 'column' | 'background',
-      textColor: 'white',
+      textColor: undefined,
       title: `Quality Pet Care Services for Your Beloved Companions`,
-      subtitle: `Welcome to our pet care center, where we offer a range of services including walking, boarding, and training. Our dedicated team is here to ensure your furry friend receives the best care possible.`,
+      subtitle: `Welcome to our pet care center, where we offer a range of services including walking, boarding, and training.`,
     },
     feature: {
       reversed: false,

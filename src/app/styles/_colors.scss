@@ -1,13 +1,8 @@
-$primary-dark: #50924a;
-$primary-light: #7fa764;
-$primary-lightest: #b5c18e;
-$primary-alt-dark: #a8cd9f;
-$primary-alt-light: #e2f4c5;
-$secondary-light: #1679ab;
-$secondary-dark: #074173;
-$terciary-dark: #e8751a;
-$terciary-light: #fda403;
-$dark: #444;
+$primary: #b99470;
+$secondary: #deac80;
+$terciary: #f7dcb9;
+$accent: #b5c18e;
+$dark: #333;
 $black: #000;
 $light: #ccc;
 $white: #fff;
@@ -19,27 +14,22 @@ $text-muted: #666;
 $border-color: #ccc;
 
 $theme-colors: (
-  "primary-dark": $primary-dark,
-  "primary-light": $primary-light,
-  "primary-lightest": $primary-lightest,
-  "primary-alt-dark": $primary-alt-dark,
-  "primary-alt-light": $primary-alt-light,
-  "secondary-light": $secondary-light,
-  "secondary-dark": $secondary-dark,
-  "terciary-dark": $terciary-dark,
-  "terciary-light": $terciary-light,
+  "primary": $primary,
+  "secondary": $secondary,
+  "terciary": $terciary,
+  "accent": $accent,
   "dark": $dark,
   "light": $light,
   "black": $black,
   "white": $white,
-  "muted": $text-muted
+  "muted": $text-muted,
 );
 
 $all-colors: (
   "content-bg-alt": $content-bg-alt,
   "body-bg": $body-bg,
   "default-text-color": $default-text-color,
-  "border-color": $border-color
+  "border-color": $border-color,
 );
 
 $all-colors: map-merge($theme-colors, $all-colors);

@@ -1,0 +1,14 @@
+:host {
+  --_section-bg-color: white;
+  --_deg: 90deg;
+  &.has-before > .img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      var(--_deg),
+      var(--_section-bg-color),
+      transparent 60%
+    );
+  }
+}

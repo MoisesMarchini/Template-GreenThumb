@@ -12,15 +12,23 @@ export class TestimonialsSectionComponent {
     environment.sectionProps.testimonials;
   currentCardIndex = 0;
 
+  getPrevious() {
+    return (
+      (this.currentCardIndex - 1 + this.sectionProps.cards.length) %
+      this.sectionProps.cards.length
+    );
+  }
+
+  getNext() {
+    return (this.currentCardIndex + 1) % this.sectionProps.cards.length;
+  }
+
   next() {
-    this.currentCardIndex =
-      (this.currentCardIndex + 1) % this.sectionProps.cards.length;
+    this.currentCardIndex = this.getNext();
   }
 
   previous() {
-    this.currentCardIndex =
-      (this.currentCardIndex - 1 + this.sectionProps.cards.length) %
-      this.sectionProps.cards.length;
+    this.currentCardIndex = this.getPrevious();
   }
 }
 

@@ -17,16 +17,16 @@
           (click)="setCard(i)"
           [class.expand]="i === currentCardIndex || expandAll"
         >
-          <p class="font-bold text-sm flex justify-between items-center gap-4">
+          <p class="font-bold text-sm flex items-center gap-2">
+            <i
+              [class]="
+                'fa-solid fa-chevron-down chevron ' +
+                (i === currentCardIndex || expandAll ? 'active' : '')
+              "
+            ></i>
             <span>
               {{ card.title }}
             </span>
-            <i
-              [class]="
-                'fa-solid fa-chevron-' +
-                (i === currentCardIndex || expandAll ? 'up' : 'down')
-              "
-            ></i>
           </p>
           <p class="text-sm max-w-2xl body hidden">
             {{ card.body }}

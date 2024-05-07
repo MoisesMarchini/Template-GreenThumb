@@ -1,0 +1,30 @@
+<div class="slider-wrapper relative container mx-auto">
+  <div #slider class="slider w-full max-h-svh relative rounded overflow-hidden">
+    <div
+      *ngFor="let slide of slides; let i = index"
+      class="slide rounded shadow-sm"
+      [style]="'background-image: url(' + slide.image + ')'"
+    >
+      <div class="slide-content m-8">
+        <h5 class="text-5xl text-white font-bold mb-6">
+          {{ slide.title }}
+        </h5>
+        <p class="text-gray-300">
+          {{ slide.body }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="controls flex gap-2">
+    <app-default-button
+      [customClass]="'rounded-full aspect-square'"
+      (_onClick)="previous()"
+      ><i class="fa-solid fa-arrow-left"></i
+    ></app-default-button>
+    <app-default-button
+      [customClass]="'rounded-full aspect-square'"
+      (_onClick)="next()"
+      ><i class="fa-solid fa-arrow-right"></i
+    ></app-default-button>
+  </div>
+</div>

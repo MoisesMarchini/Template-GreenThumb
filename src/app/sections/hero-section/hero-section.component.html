@@ -1,7 +1,7 @@
-<section [class]="'h-svh flex relative no-anim'">
+<section [class]="'h-svh flex relative no-anim pb-0'">
   <div
     [class]="
-      'container grow grid md:grid-cols-2 gap-16 mx-auto ' +
+      'container grow grid md:grid-cols-2 md:gap-16 mx-auto ' +
       (sectionProps.textColor ? ' text-' + sectionProps.textColor : '')
     "
   >
@@ -14,11 +14,13 @@
       <p>
         {{ sectionProps.subtitle }}
       </p>
-      <div class="btn-actions flex gap-3">
+      <div class="btn-actions flex gap-3 obj">
         <app-default-button>Learn More</app-default-button>
       </div>
     </div>
     <app-placeholder-img-wrapper
+      class="img-wrapper md:h-full md:absolute md:left-1/2 md:w-1/2 md:top-0 md:bottom-0"
+      objectFit="contain"
       [imgSrc]="sectionProps.bgImgSrc"
       [load]="'eager'"
     ></app-placeholder-img-wrapper>

@@ -1,0 +1,30 @@
+<div class="flex flex-col gap-6 min-h-72">
+  <div class="review-stars flex gap-1 text-yellow-400 mx-auto">
+    <span *ngFor="let index of [].constructor(5); let i = index">
+      <i
+        [class]="
+          (card.review ?? 0 <= i ? 'fa-solid' : 'fa-regular') + ' fa-star'
+        "
+      ></i>
+    </span>
+  </div>
+  <p class="text-xl font-bold text-center">
+    {{ card.body }}
+  </p>
+  <div class="user-info flex gap-2 items-center mx-auto">
+    <div class="profile-pic-wrapper">
+      <img *ngIf="card.userImgPath" [src]="card.userImgPath" alt="" srcset="" />
+      <span *ngIf="!card.userImgPath">
+        {{ card.userName?.slice(0, 1) }}
+      </span>
+    </div>
+    <div class="info-content">
+      <p class="text-sm font-semibold">
+        {{ card.userName }}
+      </p>
+      <p class="text-sm">
+        {{ card.userOccupation }}
+      </p>
+    </div>
+  </div>
+</div>

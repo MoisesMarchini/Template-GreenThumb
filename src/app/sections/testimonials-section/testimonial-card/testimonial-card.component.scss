@@ -1,0 +1,10 @@
+.profile-pic-wrapper {
+  display: grid;
+  place-content: center;
+  height: 2rem;
+  aspect-ratio: 1;
+  background-color: var(--accent);
+  border-radius: 50vw;
+  color: white;
+  font-weight: 500;
+}

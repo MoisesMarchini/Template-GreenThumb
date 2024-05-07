@@ -9,8 +9,8 @@ import { DefaultInputComponent } from './default-input/default-input.component';
 import { FooterComponent } from './footer/footer.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.component';
-
-
+import { BtnBackToTopComponent } from './btn-back-to-top/btn-back-to-top.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,9 @@ import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.componen
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
     FooterComponent,
-    LoaderSpinnerComponent
+    LoaderSpinnerComponent,
+    BtnBackToTopComponent,
+    SliderComponent,
   ],
   exports: [
     NavbarComponent,
@@ -27,13 +29,10 @@ import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.componen
     PlaceholderImgWrapperComponent,
     DefaultInputComponent,
     FooterComponent,
-    LoaderSpinnerComponent
+    LoaderSpinnerComponent,
+    BtnBackToTopComponent,
+    SliderComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    DirectivesModule
-  ]
+  imports: [CommonModule, RouterModule, FormsModule, DirectivesModule],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

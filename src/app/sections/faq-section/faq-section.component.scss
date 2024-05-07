@@ -1,3 +1,11 @@
 .card.expand > .body {
   display: block;
 }
+
+.chevron {
+  transition: 0.2s;
+}
+
+.chevron.active {
+  transform: scaleY(-1);
+}

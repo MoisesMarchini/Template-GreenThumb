@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
   },
 })
 export class PlaceholderImgWrapperComponent {
+  @Input() objectFit: 'cover' | 'contain' = 'cover';
   @Input() imgSrc?: string;
   @Input() customCss?: string;
   @Input() load?: string = 'lazy';

@@ -1,6 +1,6 @@
 <div
   [class]="
-    'img-wrapper h-full flex overflow-hidden justify-center items-center ' +
+    'img-wrapper h-full flex overflow-hidden relative justify-center items-center ' +
     (!imgSrc ? 'bg-gray-200 text-gray-400 ' : '') +
     customCss
   "
@@ -9,7 +9,9 @@
     *ngIf="imgSrc"
     [src]="imgSrc"
     alt=""
-    class="w-full h-full object-cover"
+    class="w-full h-full"
+    [class.object-contain]="objectFit === 'contain'"
+    [class.object-cover]="objectFit === 'cover'"
     srcset=""
     [loading]="load"
   />

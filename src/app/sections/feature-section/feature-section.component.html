@@ -36,7 +36,8 @@
       *ngIf="sectionProps.sideImgSrc"
       [imgSrc]="sectionProps.sideImgSrc"
       [customCss]="'rounded'"
-      class="min-h-80"
+      class="min-h-80 has-before"
+      [style]="'--_deg: ' + (sectionProps.reversed ? '-90deg' : '90deg')"
     ></app-placeholder-img-wrapper>
   </div>
 </section>

@@ -12,8 +12,7 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
 import { FAQSectionComponent } from './faq-section/faq-section.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { SectionAnimationShowDirective } from '../directives/section-animation-show.directive';
-
-
+import { TestimonialCardComponent } from './testimonials-section/testimonial-card/testimonial-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +22,7 @@ import { SectionAnimationShowDirective } from '../directives/section-animation-s
     CTASectionComponent,
     NewsletterSectionComponent,
     FAQSectionComponent,
+    TestimonialCardComponent,
   ],
   exports: [
     HeroSectionComponent,
@@ -33,7 +33,8 @@ import { SectionAnimationShowDirective } from '../directives/section-animation-s
     FAQSectionComponent,
     BenefitsSectionModule,
     FeatureListSectionModule,
-    StatsSectionModule
+    StatsSectionModule,
+    TestimonialCardComponent,
   ],
   imports: [
     CommonModule,
@@ -41,10 +42,8 @@ import { SectionAnimationShowDirective } from '../directives/section-animation-s
     BenefitsSectionModule,
     FeatureListSectionModule,
     DirectivesModule,
-    StatsSectionModule
+    StatsSectionModule,
   ],
-  providers: [
-    SectionAnimationShowDirective
-  ]
+  providers: [SectionAnimationShowDirective],
 })
-export class SectionsModule { }
+export class SectionsModule {}

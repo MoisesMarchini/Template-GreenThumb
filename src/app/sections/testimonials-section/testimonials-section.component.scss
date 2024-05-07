@@ -1,10 +1,14 @@
-.profile-pic-wrapper {
-  display: grid;
-  place-content: center;
-  height: 2rem;
-  aspect-ratio: 1;
-  background-color: var(--primary-light);
-  border-radius: 50vw;
-  color: white;
-  font-weight: 500;
+.testimonial-card {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  &.active {
+    opacity: 1;
+  }
+  &.previous {
+    transform: translateX(-100%);
+  }
+  &.next {
+    transform: translateX(100%);
+  }
 }
