@@ -9,7 +9,7 @@ import { setInterval } from 'timers';
 })
 export class SliderComponent {
   @ViewChild('slider') slider!: ElementRef<HTMLDivElement>;
-  intervalTime = 10000;
+  intervalTime = 8000;
   slides = [
     {
       title: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
@@ -40,11 +40,6 @@ export class SliderComponent {
       title: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
       body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
       image: `'/assets/images/slider/slide 1.jpg'`,
-    },
-    {
-      title: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-      body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-      image: `'/assets/images/slider/slide 2.jpg'`,
     },
   ];
 

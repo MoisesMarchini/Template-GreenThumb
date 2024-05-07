@@ -18,7 +18,7 @@ export const environmentDefault = {
         cards: [] as Card[],
       },
       {
-        sideImgSrc: '/assets/images/feature-section/banner.jpg',
+        sideImgSrc: '/assets/images/feature-section/hero-alt.png',
         subtitle: `Comforting`,
         title: `A Home Away from Home for Your Pet`,
         body: `At our pet boarding facility, we prioritize creating a homely and safe environment for your furry friends. With our experienced staff and comfortable accommodations, you can trust that your pet will be well taken care of while you're away.`,
