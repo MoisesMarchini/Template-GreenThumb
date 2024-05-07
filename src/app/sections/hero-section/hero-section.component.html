@@ -1,16 +1,23 @@
 <section [class]="'h-svh flex relative no-anim pb-0'">
   <div
     [class]="
-      'container grow grid md:grid-cols-2 md:gap-16 mx-auto ' +
+      'container grow grid mx-auto ' +
       (sectionProps.textColor ? ' text-' + sectionProps.textColor : '')
     "
   >
+    <app-placeholder-img-wrapper
+      class="img-wrapper absolute inset-0"
+      objectFit="cover"
+      [imgSrc]="sectionProps.bgImgSrc"
+      [load]="'eager'"
+    ></app-placeholder-img-wrapper>
     <div
-      class="content mt-auto md:my-auto relative z-10 flex flex-col mx-auto gap-8 max-w-xl"
+      class="content m-auto relative z-10 text-white flex flex-col gap-8 text-center justify-center items-center max-w-xl"
     >
-      <h1 class="text-5xl font-bold">
-        {{ sectionProps.title }}
-      </h1>
+      <h1
+        class="text-5xl md:text-6xl font-bold"
+        [innerHTML]="sectionProps.title"
+      ></h1>
       <p>
         {{ sectionProps.subtitle }}
       </p>
@@ -18,14 +25,8 @@
         <app-default-button>Learn More</app-default-button>
       </div>
     </div>
-    <app-placeholder-img-wrapper
-      class="img-wrapper md:h-full md:absolute md:left-1/2 md:w-1/2 md:top-0 md:bottom-0"
-      objectFit="contain"
-      [imgSrc]="sectionProps.bgImgSrc"
-      [load]="'eager'"
-    ></app-placeholder-img-wrapper>
   </div>
-  <span class="scroll-down" [class.scrolled]="scrolled">
+  <span class="scroll-down text-white" [class.scrolled]="scrolled">
     <i class="fa-solid fa-arrow-down icon"></i>
   </span>
 </section>

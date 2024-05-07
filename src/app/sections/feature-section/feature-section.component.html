@@ -4,7 +4,7 @@
     style="min-height: 80vh"
   >
     <div
-      class="left my-auto md:pt-16 pb-16"
+      class="left grid my-auto md:pt-16 pb-16"
       [class.order-1]="sectionProps.reversed"
     >
       <h3 class="font-semibold mb-6" *ngIf="!!sectionProps.subtitle">
@@ -31,6 +31,13 @@
           </p>
         </div>
       </div>
+      <app-default-button
+        *ngIf="sectionProps.showCtaBtn === true"
+        [outline]="true"
+        [customClass]="'btn-xl'"
+        class="mr-auto show-anim mt-6"
+        >Learn More</app-default-button
+      >
     </div>
     <app-placeholder-img-wrapper
       *ngIf="sectionProps.sideImgSrc"

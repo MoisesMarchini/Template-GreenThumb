@@ -11,41 +11,35 @@ export const environmentDefault = {
   customProps: {
     featureSections: [
       {
-        sideImgSrc: '/assets/images/feature-section/banner.jpg',
-        subtitle: `Convenient`,
-        title: `Reliable Dog Walking Service You Can Trust`,
-        body: `Our dog walking service offers the convenience and reliability you need. With our experienced and trustworthy team, you can rest assured that your furry friend is in good hands. We prioritize the safety and well-being of your pet, providing them with the exercise and attention they deserve.`,
+        sideImgSrc: '/assets/images/image (2).jpg',
+        subtitle: `About Us`,
+        title: `Your Trusted Partner for Impeccable Home Cleaning`,
+        body: `We specialize in providing high-quality residential cleaning services to ensure your home is always clean and fresh. Our dedicated team is here to make your life easier by providing a healthy and peaceful environment for you and your family.`,
         cards: [] as Card[],
       },
       {
-        sideImgSrc: '/assets/images/feature-section/hero-alt.png',
-        subtitle: `Comforting`,
-        title: `A Home Away from Home for Your Pet`,
-        body: `At our pet boarding facility, we prioritize creating a homely and safe environment for your furry friends. With our experienced staff and comfortable accommodations, you can trust that your pet will be well taken care of while you're away.`,
+        sideImgSrc: '/assets/images/image (1).jpg',
+        subtitle: `Cleaning Services`,
+        title: `Tailored Solutions for a Sparkling Home`,
+        body: `Explore our range of cleaning services designed to meet your specific needs. From regular cleanings to deep cleans, we offer tailored solutions to keep your home spotless.`,
         cards: [
           {
-            title: `Safe Haven`,
-            body: `Our pet boarding facility offers a homely and safe environment for your pets to relax and enjoy.`,
+            title: `Regular Cleaning`,
+            body: `Keep your home consistently clean with our regular cleaning services.`,
           },
           {
-            title: `Peaceful Retreat`,
-            body: `With spacious play areas and cozy sleeping quarters, your pet will feel right at home.`,
+            title: `Deep Cleaning`,
+            body: `Restore freshness to every corner with our thorough deep cleaning treatments.`,
           },
         ] as Card[],
         reversed: true,
-      },
-      {
-        sideImgSrc: '/assets/images/feature-section/banner.jpg',
-        subtitle: `Effective`,
-        title: `Structured Dog Training for Better Behavior`,
-        body: `Our dog training services offer a structured approach to help your furry friend develop better behavior. With our experienced trainers, your dog will learn essential commands and socialize with other dogs in a safe and controlled environment. Whether you have a new puppy or an older dog, our training programs are tailored to meet their specific needs and address any behavioral issues they may have. Invest in your dog's future and enjoy a happier, well-behaved companion.`,
-        cards: [] as Card[],
+        showCtaBtn: true,
       },
     ] as FeatureSectionProps[],
     benefitsSections: [
       {
         reversed: true,
-        sideImgSrc: '/assets/images/feature-section/banner.jpg',
+        sideImgSrc: '/assets/images/image (3).jpg',
         subtitle: `Caring`,
         title: `Providing Top-Quality Pet Care Services for Your Beloved Pets`,
         body: `At our pet care center, we prioritize the health, safety, and happiness of your pets. Our team of experienced professionals is dedicated to providing exceptional care and attention to your furry friends. Whether it's walking, boarding, or training, we offer a range of services tailored to meet the unique needs of each pet.`,
@@ -62,7 +56,7 @@ export const environmentDefault = {
       },
     ] as BenefitsSectionProps[],
     ctaSection: {
-      title: `Professional Pet Care Services Available`,
+      title: `Experience the CleanHome Difference Today`,
       body: `Book a service or contact us for more information`,
       actionButtons: {
         primaryButton: {
@@ -79,27 +73,21 @@ export const environmentDefault = {
       cards: [
         {
           review: 5,
-          body: 'I absolutely love the sustainable gardening products! They have transformed my garden into a thriving oasis. Highly recommended!',
+          body: 'Impressed with the quality of service provided by CleanHome. My house has never been so clean and fresh!',
           userName: 'John Smith',
           userOccupation: 'Gardening Enthusiast, Green Gardens',
         },
         {
           review: 4,
-          body: `I've been using these gardening tools for a few months now, and I'm quite pleased with the results. They're sturdy and well-designed, making my gardening tasks much more enjoyable.`,
+          body: `The team was professional and efficient. Loved coming home to find everything spotless!`,
           userName: 'Alicia Chang',
           userOccupation: 'Botanist, Chang Botanicals',
         },
         {
           review: 5,
-          body: `These gardening products have made such a difference in my life! Not only are they eco-friendly, but they're also incredibly effective. I can't imagine gardening without them now.`,
+          body: `I wholeheartedly recommend CleanHome to anyone looking for high-quality residential cleaning.`,
           userName: 'Sarah Thompson',
           userOccupation: 'Environmental Scientist',
-        },
-        {
-          review: 4.5,
-          body: `The customer service provided by this company is outstanding. They were incredibly helpful and responsive throughout the entire process. I'm very satisfied!`,
-          userName: 'Emily Davis',
-          userOccupation: 'Business Owner, Davis Designs',
         },
       ] as Partial<Testimonial>[],
     },
@@ -140,11 +128,11 @@ export const environmentDefault = {
   },
   sectionProps: {
     hero: {
-      bgImgSrc: '/assets/images/hero-alt2.png',
+      bgImgSrc: '/assets/images/hero.jpg',
       bgLayout: 'background' as 'column' | 'background',
-      textColor: undefined,
-      title: `Quality Pet Care Services for Your Beloved Companions`,
-      subtitle: `Welcome to our pet care center, where we offer a range of services including walking, boarding, and training.`,
+      textColor: 'white',
+      title: `Your Home <br><span class="text-primary">Clean</span> and <span class="text-primary">Fresh</span>.`,
+      subtitle: `Impeccable Cleaning for a Healthy Environment.`,
     },
     feature: {
       reversed: false,

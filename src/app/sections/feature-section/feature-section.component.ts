@@ -13,6 +13,7 @@ export class FeatureSectionComponent {
 
 export interface FeatureSectionProps {
   reversed?: boolean;
+  showCtaBtn?: boolean;
   sideImgSrc: string;
   subtitle: string;
   title: string;

@@ -1,8 +1,10 @@
 header {
   transition: var(--default-animation-duration);
+  color: var(--white);
   // border-bottom: 1px solid transparent;
   &.sticked {
     background-color: var(--body-bg);
+    color: var(--default-text-color);
     // border-color: ;
   }
 }

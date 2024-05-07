@@ -1,14 +1,16 @@
 section {
+  overflow: hidden;
+  .img-wrapper {
+    filter: contrast(0.35);
+  }
   > .container {
     margin-top: var(--nav-height);
   }
-  overflow: hidden;
 }
 
 .scroll-down {
   position: absolute;
   bottom: 0;
-  margin: calc((1.5rem + 4vmin) * 0.5);
   border-radius: 50vw;
   width: 3rem;
   aspect-ratio: 1;
@@ -18,9 +20,13 @@ section {
   opacity: 0.5;
   transition: var(--default-animation-duration);
   overflow: hidden;
+
+  margin: 0;
+  margin-bottom: 3rem;
+  transform: translateX(-50%);
+  left: 50%;
   &:hover {
-    opacity: 0.85;
-    transform: scale(1.05);
+    transform: translateX(-50%) scale(1.05);
   }
   > .icon {
     position: relative;
@@ -34,19 +40,12 @@ section {
   }
 }
 
-@media (min-width: 768px) {
-  .img-wrapper {
-    padding: 3rem;
-    background: linear-gradient(220.55deg, #fff6eb 0%, #dfd1c5 100%);
-  }
-  .scroll-down {
-    margin: 0;
-    margin-bottom: 3rem;
-    transform: translateX(-50%);
-    left: 25%;
-    &:hover {
-      transform: translateX(-50%) scale(1.05);
-    }
+@media (max-width: 768px) {
+  .content {
+    align-items: self-start;
+    text-align: start;
+    margin-bottom: 9rem;
+    margin-top: auto;
   }
 }
 
