@@ -1,5 +1,14 @@
-.card.expand > .body {
-  display: block;
+.card {
+  grid-template-rows: auto 0fr;
+  transition: 0.2s;
+}
+
+.card.expand {
+  grid-template-rows: auto 1fr;
+}
+
+.body {
+  overflow: hidden;
 }
 
 .chevron {

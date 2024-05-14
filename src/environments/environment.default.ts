@@ -41,19 +41,10 @@ export const environmentDefault = {
       {
         reversed: true,
         sideImgSrc: '/assets/images/image (3).jpg',
-        subtitle: `Caring`,
-        title: `Providing Top-Quality Pet Care Services for Your Beloved Pets`,
-        body: `At our pet care center, we prioritize the health, safety, and happiness of your pets. Our team of experienced professionals is dedicated to providing exceptional care and attention to your furry friends. Whether it's walking, boarding, or training, we offer a range of services tailored to meet the unique needs of each pet.`,
-        cards: [
-          {
-            title: `100%`,
-            body: `Health and Wellness Services for Your Pets`,
-          },
-          {
-            title: `100%`,
-            body: `Safe and Secure Environment for Your Pets`,
-          },
-        ] as Card[],
+        subtitle: `Why Choose Us`,
+        title: `Your Satisfaction, Our Priority.`,
+        body: `Discover why CleanHome is the top choice for homeowners seeking professional cleaning services. With our team of trained professionals and commitment to eco-friendly practices, we prioritize your satisfaction above all else.`,
+        cards: [] as Card[],
       },
     ] as BenefitsSectionProps[],
     ctaSection: {
@@ -105,24 +96,24 @@ export const environmentDefault = {
       },
       cards: [
         {
-          title: 'How do I book services?',
-          body: 'Booking our pet care services is easy. Simply visit our website or give us a call to schedule an appointment.',
+          title: 'How often should I schedule a cleaning service?',
+          body: 'We recommend scheduling regular cleaning services based on your lifestyle and preferences. For most households, weekly or bi-weekly cleanings are sufficient to maintain a clean and healthy living environment.',
         },
         {
-          title: 'What are your rates?',
-          body: `Our rates vary depending on the type of service you require. Please contact us directly for more information.`,
+          title: 'Do I need to provide cleaning supplies?',
+          body: `No, our team will bring all the necessary cleaning supplies and equipment to perform the cleaning services. We use high-quality, eco-friendly products to ensure effective cleaning without harming the environment.`,
         },
         {
-          title: `Do you offer boarding?`,
-          body: `Yes, we offer boarding services for your pets. They will be well taken care of in a comfortable and safe environment.`,
+          title: `Can I customize my cleaning service?`,
+          body: `Absolutely! We understand that every home is unique, so we offer customizable cleaning services to meet your specific needs. Whether you have special requests or specific areas you want us to focus on, just let us know, and we'll tailor the service to suit your requirements.`,
         },
         {
-          title: `Can you train my pet?`,
-          body: `Absolutely! We have experienced trainers who can help with basic obedience training and behavioral issues.`,
+          title: `How long does a typical cleaning service take?`,
+          body: `The duration of a cleaning service depends on various factors, such as the size of your home, the level of cleanliness required, and any additional services requested. On average, a standard cleaning service for a typical-sized home can take anywhere from 2 to 4 hours.`,
         },
         {
-          title: `Is your staff trained?`,
-          body: `Yes, our staff is trained to handle pets of all sizes and temperaments. They are passionate about providing the best care possible.`,
+          title: `Is your cleaning service insured?`,
+          body: `Yes, we are fully insured to provide cleaning services. Our insurance coverage protects both our team members and your property, giving you peace of mind knowing that you're in safe hands. We prioritize safety and professionalism in every aspect of our service.`,
         },
       ] as Card[],
     } as FAQSectionProps,

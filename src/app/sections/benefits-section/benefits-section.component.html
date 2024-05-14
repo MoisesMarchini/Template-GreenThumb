@@ -1,7 +1,7 @@
 <app-base-section [wavesBefore]="true">
   <div
     class="container grid md:grid-cols-2 mx-auto gap-6 md:gap-16"
-    style="min-height: 80vh"
+    style="min-height: 60vh"
   >
     <div
       class="left my-auto grid md:pt-16 pb-16"
@@ -17,7 +17,7 @@
         {{ sectionProps.body }}
       </p>
       <ul
-        class="grid md:grid-cols-2 gap-8 my-10"
+        class="grid md:grid-cols-2 gap-8 mt-10"
         *ngIf="!!sectionProps.cards.length"
       >
         <li
@@ -30,8 +30,8 @@
       </ul>
       <app-default-button
         [outline]="true"
-        [customClass]="'btn-xl'"
-        class="mr-auto show-anim"
+        [customClass]="'btn-xl active'"
+        class="mr-auto show-anim mt-10"
         >Learn More</app-default-button
       >
     </div>
@@ -39,8 +39,10 @@
       *ngIf="sectionProps.sideImgSrc"
       [imgSrc]="sectionProps.sideImgSrc"
       [customCss]="'rounded'"
-      class="min-h-80 has-before"
-      [style]="'--_deg: ' + (sectionProps.reversed ? '-90deg' : '90deg')"
+      [class]="
+        'min-h-80 has-before ' +
+        (sectionProps.reversed ? 'md:[--_deg:-90deg]' : 'md:[--_deg:90deg]')
+      "
     ></app-placeholder-img-wrapper>
   </div>
 </app-base-section>

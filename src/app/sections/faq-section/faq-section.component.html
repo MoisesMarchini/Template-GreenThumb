@@ -6,14 +6,15 @@
     <p class="mb-8">
       {{ sectionProps.body }}
     </p>
-    <ul class="grid border-t border-black mb-12">
+    <ul class="grid border-black mb-12">
       <li
         *ngFor="let card of sectionProps.cards; let i = index"
         class="show-anim"
         [delayIndex]="i"
       >
         <div
-          class="card border-b border-black grid gap-3 py-4 px-3"
+          class="card border-b border-black grid py-4 px-3 place-content-start"
+          [class.border-t]="i === 0"
           (click)="setCard(i)"
           [class.expand]="i === currentCardIndex || expandAll"
         >
@@ -28,9 +29,11 @@
               {{ card.title }}
             </span>
           </p>
-          <p class="text-sm max-w-2xl body hidden">
-            {{ card.body }}
-          </p>
+          <div class="body">
+            <p class="text-sm max-w-2xl mt-3">
+              {{ card.body }}
+            </p>
+          </div>
         </div>
       </li>
     </ul>
