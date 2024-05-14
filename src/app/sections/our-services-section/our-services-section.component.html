@@ -1,0 +1,16 @@
+<app-base-section>
+  <div class="container mx-auto">
+    <h3 class="font-semibold mb-6" *ngIf="!!sectionProps.subtitle">
+      {{ sectionProps.subtitle }}
+    </h3>
+    <h2 class="text-4xl font-bold mb-12">
+      {{ sectionProps.title }}
+    </h2>
+    <div class="grid md:grid-cols-3 gap-12">
+      <app-service-card
+        *ngFor="let card of cards"
+        [card]="card"
+      ></app-service-card>
+    </div>
+  </div>
+</app-base-section>

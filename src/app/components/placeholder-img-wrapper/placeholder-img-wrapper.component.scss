@@ -1,6 +1,5 @@
 :host {
   --_section-bg-color: white;
-  --_deg: 90deg;
   &.has-before > .img-wrapper::before {
     content: "";
     position: absolute;

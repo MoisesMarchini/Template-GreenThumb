@@ -8,6 +8,7 @@ import { FAQSectionProps } from '../app/sections/faq-section/faq-section.compone
 import { FeatureSectionProps } from '../app/sections/feature-section/feature-section.component';
 
 export const environmentDefault = {
+  companyName: 'Clean Home',
   customProps: {
     featureSections: [
       {
@@ -17,24 +18,24 @@ export const environmentDefault = {
         body: `We specialize in providing high-quality residential cleaning services to ensure your home is always clean and fresh. Our dedicated team is here to make your life easier by providing a healthy and peaceful environment for you and your family.`,
         cards: [] as Card[],
       },
-      {
-        sideImgSrc: '/assets/images/image (1).jpg',
-        subtitle: `Cleaning Services`,
-        title: `Tailored Solutions for a Sparkling Home`,
-        body: `Explore our range of cleaning services designed to meet your specific needs. From regular cleanings to deep cleans, we offer tailored solutions to keep your home spotless.`,
-        cards: [
-          {
-            title: `Regular Cleaning`,
-            body: `Keep your home consistently clean with our regular cleaning services.`,
-          },
-          {
-            title: `Deep Cleaning`,
-            body: `Restore freshness to every corner with our thorough deep cleaning treatments.`,
-          },
-        ] as Card[],
-        reversed: true,
-        showCtaBtn: true,
-      },
+      // {
+      //   sideImgSrc: '/assets/images/image (1).jpg',
+      //   subtitle: `Cleaning Services`,
+      //   title: `Tailored Solutions for a Sparkling Home`,
+      //   body: `Explore our range of cleaning services designed to meet your specific needs. From regular cleanings to deep cleans, we offer tailored solutions to keep your home spotless.`,
+      //   cards: [
+      //     {
+      //       title: `Regular Cleaning`,
+      //       body: `Keep your home consistently clean with our regular cleaning services.`,
+      //     },
+      //     {
+      //       title: `Deep Cleaning`,
+      //       body: `Restore freshness to every corner with our thorough deep cleaning treatments.`,
+      //     },
+      //   ] as Card[],
+      //   reversed: true,
+      //   showCtaBtn: true,
+      // },
     ] as FeatureSectionProps[],
     benefitsSections: [
       {

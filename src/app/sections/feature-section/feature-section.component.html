@@ -1,4 +1,4 @@
-<section>
+<app-base-section>
   <div
     class="container md:grid grid-cols-2 gap-16 mx-auto"
     style="min-height: 80vh"
@@ -43,8 +43,10 @@
       *ngIf="sectionProps.sideImgSrc"
       [imgSrc]="sectionProps.sideImgSrc"
       [customCss]="'rounded'"
-      class="min-h-80 has-before"
-      [style]="'--_deg: ' + (sectionProps.reversed ? '-90deg' : '90deg')"
+      [class]="
+        'min-h-80 has-before ' +
+        (sectionProps.reversed ? 'md:[--_deg:-90deg]' : 'md:[--_deg:90deg]')
+      "
     ></app-placeholder-img-wrapper>
   </div>
-</section>
+</app-base-section>

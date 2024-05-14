@@ -5,12 +5,18 @@
     *ngFor="let props of customProps.featureSections"
     [sectionProps]="props"
   ></app-feature-section>
-  <app-slider></app-slider>
+  <app-our-services-section></app-our-services-section>
+  <!-- <app-slider></app-slider> -->
   <app-benefits-section
+    style="--_background: #eaf6ff"
     *ngFor="let props of customProps.benefitsSections"
     [sectionProps]="props"
   ></app-benefits-section>
-  <app-cta-section [sectionProps]="customProps.ctaSection"></app-cta-section>
+  <app-cta-section
+    class="no-anim"
+    [sectionProps]="customProps.ctaSection"
+    style="--_background: linear-gradient(#eaf6ff, transparent)"
+  ></app-cta-section>
   <app-testimonials-section
     [sectionProps]="customProps.testimonialSection"
   ></app-testimonials-section>

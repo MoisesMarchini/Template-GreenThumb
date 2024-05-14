@@ -1,0 +1,28 @@
+<div
+  class="card text-center bg-white shadow-xl rounded-lg p-6 pb-12 h-full relative"
+>
+  <div class="icon-wrapper p-6 text-5xl text-primary">
+    <i [class]="card.fontawesomeIcon"></i>
+  </div>
+  <h3 class="text-xl mb-3 font-semibold">
+    {{ card.title }}
+  </h3>
+  <p class="text-sm text-muted">
+    {{ card.body }}
+  </p>
+  <div
+    class="btn-wrapper absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
+  >
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center justify-center place-content-center cta-link flex-nowrap shadow-xl"
+    >
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <!-- <app-default-button [customClass]="'rounded-full aspect-square'">
+      <i class="fa-solid fa-arrow-right"></i>
+    </app-default-button> -->
+  </div>
+</div>

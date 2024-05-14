@@ -13,6 +13,8 @@ import { FAQSectionComponent } from './faq-section/faq-section.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { SectionAnimationShowDirective } from '../directives/section-animation-show.directive';
 import { TestimonialCardComponent } from './testimonials-section/testimonial-card/testimonial-card.component';
+import { OurServicesSectionComponent } from './our-services-section/our-services-section.component';
+import { ServiceCardComponent } from './our-services-section/service-card/service-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { TestimonialCardComponent } from './testimonials-section/testimonial-car
     NewsletterSectionComponent,
     FAQSectionComponent,
     TestimonialCardComponent,
+    OurServicesSectionComponent,
+    ServiceCardComponent,
   ],
   exports: [
     HeroSectionComponent,
@@ -35,6 +39,8 @@ import { TestimonialCardComponent } from './testimonials-section/testimonial-car
     FeatureListSectionModule,
     StatsSectionModule,
     TestimonialCardComponent,
+    OurServicesSectionComponent,
+    ServiceCardComponent,
   ],
   imports: [
     CommonModule,

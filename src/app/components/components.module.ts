@@ -11,6 +11,7 @@ import { DirectivesModule } from '../directives/directives.module';
 import { LoaderSpinnerComponent } from './loader-spinner/loader-spinner.component';
 import { BtnBackToTopComponent } from './btn-back-to-top/btn-back-to-top.component';
 import { SliderComponent } from './slider/slider.component';
+import { BaseSectionComponent } from './base-section/base-section.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SliderComponent } from './slider/slider.component';
     LoaderSpinnerComponent,
     BtnBackToTopComponent,
     SliderComponent,
+    BaseSectionComponent,
   ],
   exports: [
     NavbarComponent,
@@ -32,6 +34,7 @@ import { SliderComponent } from './slider/slider.component';
     LoaderSpinnerComponent,
     BtnBackToTopComponent,
     SliderComponent,
+    BaseSectionComponent,
   ],
   imports: [CommonModule, RouterModule, FormsModule, DirectivesModule],
 })

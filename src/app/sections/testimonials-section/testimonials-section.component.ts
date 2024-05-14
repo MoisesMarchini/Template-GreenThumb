@@ -11,6 +11,11 @@ export class TestimonialsSectionComponent {
   @Input() sectionProps: TestmonialSectionProps =
     environment.sectionProps.testimonials;
   currentCardIndex = 0;
+  intervalTime = 7000;
+
+  ngAfterViewInit() {
+    window.setInterval(() => this.next(), this.intervalTime);
+  }
 
   getPrevious() {
     return (

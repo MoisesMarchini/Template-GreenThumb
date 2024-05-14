@@ -1,0 +1,13 @@
+<section>
+  <app-placeholder-img-wrapper
+    *ngIf="wavesBefore"
+    [imgSrc]="'/assets/images/waves.png'"
+  ></app-placeholder-img-wrapper>
+  <div class="section-content">
+    <ng-content></ng-content>
+  </div>
+  <app-placeholder-img-wrapper
+    *ngIf="wavesAfter"
+    [imgSrc]="'/assets/images/waves.png'"
+  ></app-placeholder-img-wrapper>
+</section>

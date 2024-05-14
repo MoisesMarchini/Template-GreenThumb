@@ -1,7 +1,10 @@
 section,
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  .section-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: var(--_background);
+  }
 }
 
 section,
@@ -31,7 +34,8 @@ section,
   opacity: 0;
 }
 
-.no-anim {
+.no-anim section,
+.no-anim .section {
   transform: translateY(0px) !important;
   opacity: 1 !important;
 }
