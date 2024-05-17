@@ -1,35 +1,54 @@
-import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit } from '@angular/core';
+import { WindowScrollService } from './window-scroll.service';
+import {
+  Directive,
+  ElementRef,
+  HostBinding,
+  HostListener,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 @Directive({
-  selector: 'section, .show-anim',
+  selector: 'section, .show-anim, .section',
 })
 export class SectionAnimationShowDirective implements OnInit {
   @Input() delayIndex: number = 0;
-  private show = false;
+  private disabled = false;
+  private show = true;
   private percentVisibleThreshold = 0; // Porcentagem de visibilidade desejada
-  private additionalOffset = 5; // Deslocamento adicional em pixels
+  private additionalOffset = 30; // Deslocamento adicional em pixels
 
-  constructor(private elementRef: ElementRef<HTMLElement>) {
+  constructor(
+    private elementRef: ElementRef<HTMLElement>,
+    private windowScrollService: WindowScrollService
+  ) {
+    windowScrollService.$scrollY.subscribe((y) => {
+      this.onWindowScroll(y);
+    });
   }
 
   ngOnInit() {
-    this.elementRef.nativeElement.style.setProperty('--_anim-delay-index', `${this.delayIndex}`);
+    // caso o javascript esteja ativado
+    // this.disabled = false;
+
+    if (window.outerWidth > 768)
+      this.elementRef.nativeElement.style.setProperty(
+        '--_anim-delay-index',
+        `${this.delayIndex}`
+      );
+
     this.onWindowScroll();
   }
 
-  @HostListener('window:scroll')
-  onWindowScroll() {
+  onWindowScroll(scrollY: number = 0) {
+    if (this.disabled) return;
+
     const percentVisibleThreshold = this.percentVisibleThreshold / 100;
     const additionalOffset = this.additionalOffset;
 
     const element = this.elementRef.nativeElement;
     const viewportHeight = window.innerHeight;
-    const scrollPosition =
-      window.scrollY ||
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0;
+    const scrollPosition = scrollY;
 
     const elementRect = element.getBoundingClientRect();
     const elementTop = elementRect.top + scrollPosition + additionalOffset;
